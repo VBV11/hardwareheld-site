@@ -1,28 +1,22 @@
 <!doctype html>
 <html lang="nl">
-  <head>
+ <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary Meta Tags -->
+    <!-- Title als fallback (React Helmet vervangt deze wel correct) -->
     <title>Hardware Held - gratis ophalen bedrijfshardware Limburg</title>
-    <meta name="description" content="Gratis ophalen van oude bedrijfshardware in Zuid- en Midden-Limburg. Inclusief veilige datawissing met bevestiging per apparaat voor het MKB." />
+
+    <!-- Statisch: blijven hier omdat React Helmet ze NIET dubbel zet -->
     <meta name="author" content="Hardware Held" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="keywords" content="oude hardware ophalen, datawissing, bedrijfshardware, computers afvoeren, refurbished, Sittard-Geleen, Zuid-Limburg, Midden-Limburg, Maastricht, Heerlen, Roermond, Weert" />
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://hardwareheld.nl/" />
 
     <!-- Geo tags voor lokale SEO -->
     <meta name="geo.region" content="NL-LI" />
     <meta name="geo.placename" content="Sittard-Geleen" />
     <meta name="geo.position" content="50.9999;5.8667" />
     <meta name="ICBM" content="50.9999, 5.8667" />
-
-    <!-- Search engine verification: vul in zodra je verifieert -->
-    <!-- <meta name="google-site-verification" content="VUL_HIER_IN" /> -->
-    <!-- <meta name="msvalidate.01" content="VUL_HIER_IN" /> -->
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -36,11 +30,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Open Graph (statisch zodat WhatsApp, LinkedIn en AI-crawlers ze zien) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Hardware Held: gratis ophalen bedrijfshardware Limburg" />
-    <meta property="og:description" content="Gratis ophalen van oude bedrijfshardware in Zuid- en Midden-Limburg. Inclusief veilige datawissing met bevestiging per apparaat." />
-    <meta property="og:url" content="https://hardwareheld.nl/" />
+    <!-- Open Graph: alleen tags die React Helmet NIET zet -->
     <meta property="og:image" content="https://hardwareheld.nl/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -48,10 +38,8 @@
     <meta property="og:locale" content="nl_NL" />
     <meta property="og:site_name" content="Hardware Held" />
 
-    <!-- Twitter/X -->
+    <!-- Twitter: alleen tags die React Helmet NIET zet -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hardware Held: gratis ophalen bedrijfshardware Limburg" />
-    <meta name="twitter:description" content="Gratis ophalen van oude bedrijfshardware in Zuid- en Midden-Limburg. Inclusief veilige datawissing met bevestiging per apparaat." />
     <meta name="twitter:image" content="https://hardwareheld.nl/og-image.png" />
 
     <!-- Structured Data: LocalBusiness schema -->
@@ -109,7 +97,7 @@
 
     <script type="module" crossorigin src="/assets/index-C_c_EbpH.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-C4LZ63qk.css">
-  </head>
+</head>
   <body>
     <div id="root">
       <!-- SEO fallback content voor crawlers zonder JavaScript. React vervangt deze inhoud bij het laden van de app. -->
