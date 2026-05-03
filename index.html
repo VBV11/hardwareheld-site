@@ -1,17 +1,21 @@
 <!doctype html>
 <html lang="nl">
- <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Title als fallback (React Helmet vervangt deze wel correct) -->
-    <title>Hardware Held - gratis ophalen bedrijfshardware Limburg</title>
+    <!-- Title: primair keyword vooraan, brand achteraan -->
+    <title>Gratis ophalen oude bedrijfshardware Limburg | Hardware Held</title>
 
-    <!-- Statisch: blijven hier omdat React Helmet ze NIET dubbel zet -->
+    <!-- Statische meta tags (React Helmet vervangt deze niet dubbel) -->
     <meta name="author" content="Hardware Held" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="keywords" content="oude hardware ophalen, datawissing, bedrijfshardware, computers afvoeren, refurbished, Sittard-Geleen, Zuid-Limburg, Midden-Limburg, Maastricht, Heerlen, Roermond, Weert" />
-    <meta name="description" content="Hardware Held haalt gratis oude bedrijfshardware op in Zuid- en Midden-Limburg. Inclusief veilige datawissing met bevestiging per apparaat. Voor MKB in Sittard-Geleen, Maastricht, Heerlen, Roermond en Weert. E-mail: info@hardwareheld.nl" />
+
+    <!-- Meta description: brede doelgroep, alle bedrijven -->
+    <meta name="description" content="Hardware Held haalt gratis oude bedrijfshardware op bij elk bedrijf in Zuid- en Midden-Limburg. Inclusief veilige datawissing met bevestiging per apparaat. Actief in Sittard-Geleen, Maastricht, Heerlen, Roermond, Weert en omliggende gemeenten." />
+
+    <!-- Meta keywords: brede dekking aan zoektermen -->
+    <meta name="keywords" content="oude hardware ophalen, bedrijfshardware ophalen, computers afvoeren bedrijf, laptops afvoeren, monitoren ophalen, netwerkapparatuur afvoeren, datawissing, datawissing op locatie, veilige datavernietiging, harddisk wissen, SSD wissen, IT hardware recycling, refurbished computers, kantoorhardware ophalen, gratis ophalen, Sittard-Geleen, Geleen, Maastricht, Heerlen, Roermond, Weert, Echt-Susteren, Susteren, Zuid-Limburg, Midden-Limburg, Limburg" />
 
     <!-- Geo tags voor lokale SEO -->
     <meta name="geo.region" content="NL-LI" />
@@ -19,19 +23,26 @@
     <meta name="geo.position" content="50.9999;5.8667" />
     <meta name="ICBM" content="50.9999, 5.8667" />
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://hardwareheld.nl/" />
+
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#FF6600" />
 
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconnect voor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Open Graph: alleen tags die React Helmet NIET zet -->
+    <!-- Open Graph: statisch voor homepage, voor crawlers die geen JS renderen -->
+    <meta property="og:title" content="Gratis ophalen oude bedrijfshardware Limburg | Hardware Held" />
+    <meta property="og:description" content="Wij halen gratis oude bedrijfshardware op bij elk bedrijf in Zuid- en Midden-Limburg. Inclusief veilige datawissing met bevestiging per apparaat." />
+    <meta property="og:url" content="https://hardwareheld.nl/" />
+    <meta property="og:type" content="website" />
     <meta property="og:image" content="https://hardwareheld.nl/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -39,8 +50,10 @@
     <meta property="og:locale" content="nl_NL" />
     <meta property="og:site_name" content="Hardware Held" />
 
-    <!-- Twitter: alleen tags die React Helmet NIET zet -->
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gratis ophalen oude bedrijfshardware Limburg | Hardware Held" />
+    <meta name="twitter:description" content="Wij halen gratis oude bedrijfshardware op bij elk bedrijf in Zuid- en Midden-Limburg. Inclusief veilige datawissing." />
     <meta name="twitter:image" content="https://hardwareheld.nl/og-image.png" />
 
     <!-- Structured Data: LocalBusiness schema -->
@@ -50,12 +63,12 @@
       "@type": "LocalBusiness",
       "@id": "https://hardwareheld.nl/#business",
       "name": "Hardware Held",
-      "description": "Gratis ophalen van oude bedrijfshardware in Zuid- en Midden-Limburg, inclusief veilige datawissing met bevestiging per apparaat.",
+      "description": "Gratis ophalen van oude bedrijfshardware bij elk bedrijf in Zuid- en Midden-Limburg, inclusief veilige datawissing met bevestiging per apparaat. Geen minimum aantal apparaten, geen voorrijkosten.",
       "url": "https://hardwareheld.nl",
       "email": "info@hardwareheld.nl",
       "image": "https://hardwareheld.nl/og-image.png",
       "logo": "https://hardwareheld.nl/assets/logo-BbYOM2J5.png",
-      "priceRange": "Free",
+      "priceRange": "€",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Sittard-Geleen",
@@ -74,14 +87,29 @@
         {"@type": "City", "name": "Beek"},
         {"@type": "City", "name": "Stein"},
         {"@type": "City", "name": "Urmond"},
-        {"@type": "City", "name": "Heerlen"},
         {"@type": "City", "name": "Maastricht"},
+        {"@type": "City", "name": "Heerlen"},
+        {"@type": "City", "name": "Kerkrade"},
+        {"@type": "City", "name": "Landgraaf"},
+        {"@type": "City", "name": "Brunssum"},
+        {"@type": "City", "name": "Hoensbroek"},
+        {"@type": "City", "name": "Valkenburg"},
+        {"@type": "City", "name": "Meerssen"},
+        {"@type": "City", "name": "Eijsden-Margraten"},
+        {"@type": "City", "name": "Gulpen-Wittem"},
+        {"@type": "City", "name": "Vaals"},
+        {"@type": "City", "name": "Voerendaal"},
+        {"@type": "City", "name": "Simpelveld"},
+        {"@type": "City", "name": "Beekdaelen"},
         {"@type": "City", "name": "Roermond"},
         {"@type": "City", "name": "Weert"},
         {"@type": "City", "name": "Echt-Susteren"},
+        {"@type": "City", "name": "Susteren"},
         {"@type": "City", "name": "Maasgouw"},
+        {"@type": "City", "name": "Maasbracht"},
         {"@type": "City", "name": "Leudal"},
         {"@type": "City", "name": "Nederweert"},
+        {"@type": "City", "name": "Roerdalen"},
         {"@type": "AdministrativeArea", "name": "Zuid-Limburg"},
         {"@type": "AdministrativeArea", "name": "Midden-Limburg"}
       ],
@@ -89,35 +117,175 @@
         "Gratis ophalen bedrijfshardware",
         "Datawissing op locatie",
         "Veilige datawissing",
-        "Hardware-recycling MKB"
+        "Hardware-recycling",
+        "Computers afvoeren",
+        "Laptops afvoeren",
+        "Monitoren afvoeren",
+        "Netwerkapparatuur afvoeren"
       ],
-      "knowsAbout": ["Datawissing", "Hardware-recycling", "Refurbished computers", "Duurzaamheid"],
+      "knowsAbout": [
+        "Datawissing",
+        "Hardware-recycling",
+        "Refurbished computers",
+        "Duurzaamheid",
+        "IT-asset disposal"
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Elk bedrijf met oude hardware",
+        "audienceType": "Business"
+      },
       "sameAs": []
     }
     </script>
 
+    <!-- Structured Data: Service schema voor gratis ophalen -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://hardwareheld.nl/#service-ophalen",
+      "name": "Gratis ophalen oude bedrijfshardware",
+      "provider": {"@id": "https://hardwareheld.nl/#business"},
+      "areaServed": [
+        {"@type": "AdministrativeArea", "name": "Zuid-Limburg"},
+        {"@type": "AdministrativeArea", "name": "Midden-Limburg"}
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Elk bedrijf met oude hardware in Zuid- en Midden-Limburg",
+        "audienceType": "Business"
+      },
+      "description": "Hardware Held haalt gratis oude bedrijfshardware op bij elk bedrijf in Zuid- en Midden-Limburg. Inclusief veilige datawissing met bevestiging per apparaat. Geen minimum, geen voorrijkosten.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wat kost het ophalen van oude bedrijfshardware?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Het ophalen is volledig gratis. Wij rekenen geen voorrijkosten en geen kosten per apparaat. De veilige datawissing is bij het ophalen inbegrepen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoe veilig is de datawissing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wij wissen elke gegevensdrager met professionele wissoftware. U ontvangt per apparaat een bevestiging met het serienummer, de datum en de gebruikte methode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In welk gebied halen jullie op?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wij halen gratis op in heel Zuid- en Midden-Limburg, waaronder Sittard-Geleen, Maastricht, Heerlen, Roermond, Weert, Echt-Susteren, Maasgouw, Leudal, Nederweert en omliggende gemeenten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welke hardware nemen jullie aan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wij nemen alle zakelijke computers, laptops, monitoren en netwerkapparatuur aan. Twijfelt u of uw apparatuur in aanmerking komt? Stuur een foto via e-mail of WhatsApp en u krijgt binnen 24 uur antwoord."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat doen jullie met de hardware na het ophalen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bruikbare apparatuur wordt na de datawissing opgeknapt en krijgt een tweede leven. Apparatuur die niet meer functioneert wordt op een verantwoorde manier gerecycled."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoe snel kunnen jullie langskomen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In de meeste gevallen plannen wij binnen een week een ophaalmoment in. Heeft u haast? Geef dat aan in uw bericht en wij doen ons best om eerder langs te komen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Moet ik de computers eerst zelf wissen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nee, dat hoeft niet. Wij wissen de gegevens voor u en sturen per apparaat een bevestiging met serienummer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Werken jullie ook voor zzp'ers en kleine bedrijven?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Wij werken voor elk bedrijf met oude hardware, van zzp'er tot organisatie met tientallen werkplekken. Er is geen minimum aantal apparaten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoe verschilt jullie aanpak van een kringloop of recycler?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bij Hardware Held krijgt u een schriftelijke bevestiging van de datawissing per apparaat met serienummer. Veel inleverpunten geven die zekerheid niet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat is datawissing op locatie en wanneer kies ik daarvoor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bij datawissing op locatie komen wij naar u toe en wissen wij de gegevens terwijl de apparatuur in uw pand blijft. Dat kiest u wanneer u de hardware zelf wilt houden of weggooien, maar wel zekerheid wilt over de wissing. Hiervoor geldt een vast tarief, zonder minimum."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- LET OP: hieronder staan de gebouwde asset-paden van Lovable. -->
+    <!-- Deze worden automatisch door Lovable bijgewerkt. NIET HANDMATIG AANPASSEN. -->
+    <!-- Behoud de bestaande regels uit jouw huidige index.html op deze plek. -->
     <script type="module" crossorigin src="/assets/index-C_c_EbpH.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-C4LZ63qk.css">
-</head>
- <body>
+  </head>
+  <body>
     <div id="root">
-      <!-- SEO fallback content voor crawlers zonder JavaScript. React vervangt deze inhoud bij het laden van de app. -->
-      <div style="position: absolute; left: -9999px; top: -9999px;" aria-hidden="true">
+      <!-- Noscript fallback voor crawlers en gebruikers zonder JavaScript. Geen cloaking: dit is legitieme HTML. -->
+      <noscript>
         <header>
           <h1>Hardware Held: gratis ophalen van oude bedrijfshardware in Zuid- en Midden-Limburg</h1>
+          <p>Hardware Held haalt gratis oude bedrijfshardware op bij elk bedrijf in Zuid- en Midden-Limburg. Of u nu een kantoor runt, een werkplaats, een praktijk, een winkel, een productiebedrijf, een bouwbedrijf, een transportbedrijf, een horecazaak, een autobedrijf, een installatiebedrijf, of als zzp'er werkt: wij halen het op. Inclusief veilige datawissing met bevestiging per apparaat. Datawissing op locatie is mogelijk tegen een vast tarief.</p>
         </header>
         <main>
-          <p>Hardware Held haalt gratis oude bedrijfshardware op bij bedrijven in Zuid- en Midden-Limburg. Onze dienstverlening omvat gratis ophalen inclusief veilige datawissing met bevestiging per apparaat, en datawissing op locatie tegen een vast tarief.</p>
           <h2>Wat wij aannemen</h2>
-          <p>Wij nemen alle zakelijke computers, laptops, monitoren en netwerkapparatuur aan.</p>
+          <p>Wij nemen alle zakelijke computers (towers, mini PC's, small form factor), laptops, monitoren en netwerkapparatuur aan. Alle merken, werkend of defect.</p>
+
+          <h2>Voor welk bedrijf</h2>
+          <p>Hardware Held werkt voor elk bedrijf met oude hardware. Onder andere: kantoren, praktijken, winkels, productiebedrijven, werkplaatsen, bouwbedrijven, installatiebedrijven, transportbedrijven, horecazaken, autobedrijven, administratiekantoren, tandartspraktijken, notariskantoren, accountantskantoren, adviesbureaus, architectenbureaus, makelaars, reclamebureaus, webshops en zzp'ers. Er is geen minimum aantal apparaten en geen voorrijkosten.</p>
+
           <h2>Werkgebied</h2>
-          <p>Wij zijn actief in Sittard-Geleen, Maastricht, Heerlen, Roermond, Weert en de rest van Zuid- en Midden-Limburg.</p>
-          <h2>Voor wie</h2>
-          <p>Hardware Held werkt voor het MKB en data-gevoelige sectoren zoals tandartsen, accountants, notarissen en andere bedrijven die zekerheid willen over de wissing van hun gegevens.</p>
+          <p>Wij zijn actief in heel Zuid- en Midden-Limburg. Zuid-Limburg: Sittard-Geleen, Geleen, Born, Beek, Stein, Urmond, Maastricht, Heerlen, Kerkrade, Landgraaf, Brunssum, Hoensbroek, Valkenburg, Meerssen, Eijsden-Margraten, Gulpen-Wittem, Vaals, Voerendaal, Simpelveld, Beekdaelen. Midden-Limburg: Roermond, Weert, Echt-Susteren, Susteren, Maasgouw, Maasbracht, Leudal, Nederweert, Roerdalen.</p>
+
+          <h2>Onze diensten</h2>
+          <p>Gratis ophalen van oude bedrijfshardware, inclusief veilige datawissing met bevestiging per apparaat. Datawissing op locatie tegen een vast tarief, zonder minimum.</p>
+
           <h2>Contact</h2>
-          <p>E-mail: <a href="mailto:info@hardwareheld.nl">info@hardwareheld.nl</a></p>
+          <p>E-mail: <a href="mailto:info@hardwareheld.nl">info@hardwareheld.nl</a> &middot; WhatsApp: 06 8337 3852</p>
         </main>
-      </div>
+      </noscript>
     </div>
- </body>
+  </body>
 </html>
