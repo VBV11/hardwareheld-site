@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <title>Hardware Held</title>
+  <script>
+    // GitHub Pages SPA-redirect
+    // Wanneer GitHub Pages een 404 geeft voor /werkwijze e.d.,
+    // stuurt dit script de browser door naar /?/werkwijze
+    // zodat index.html kan laden en React Router de route afhandelt.
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      '/?/' +
+      l.pathname.slice(1).replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body></body>
+</html>
