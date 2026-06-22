@@ -25,7 +25,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - name: Kopieer index.html naar alle routes (HTTP 200 per pagina)
+      - name: Kopieer index.html naar vaste routes (HTTP 200 per pagina)
         run: |
           for route in \
             werkwijze \
@@ -34,38 +34,12 @@ jobs:
             wat-wij-aannemen \
             over-ons \
             contact \
-            privacy \
-            ophalen/sittard-geleen \
-            ophalen/maastricht \
-            ophalen/heerlen \
-            ophalen/kerkrade \
-            ophalen/landgraaf \
-            ophalen/brunssum \
-            ophalen/beek \
-            ophalen/stein \
-            ophalen/born \
-            ophalen/urmond \
-            ophalen/hoensbroek \
-            ophalen/valkenburg \
-            ophalen/meerssen \
-            ophalen/beekdaelen \
-            ophalen/eijsden-margraten \
-            ophalen/gulpen-wittem \
-            ophalen/vaals \
-            ophalen/voerendaal \
-            ophalen/simpelveld \
-            ophalen/roermond \
-            ophalen/weert \
-            ophalen/echt-susteren \
-            ophalen/susteren \
-            ophalen/maasgouw \
-            ophalen/maasbracht \
-            ophalen/leudal \
-            ophalen/nederweert \
-            ophalen/roerdalen; do
+            privacy; do
             mkdir -p dist/$route
             cp dist/index.html dist/$route/index.html
           done
+      - name: Genereer custom HTML per locatiepagina
+        run: node scripts/generate-city-pages.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
