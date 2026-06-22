@@ -25,6 +25,12 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Kopieer index.html naar alle routes (HTTP 200 per pagina)
+        run: |
+          for route in werkwijze werkwijze/gratis-ophalen werkwijze/datawissing-op-locatie wat-wij-aannemen over-ons contact privacy; do
+            mkdir -p dist/$route
+            cp dist/index.html dist/$route/index.html
+          done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
