@@ -17,7 +17,7 @@ const features = [
     title: "Veilige datawissing",
     description:
       "Alle data wordt met professionele wissoftware verwijderd. U krijgt per apparaat een overzicht met datum en serienummer.",
-    href: "/werkwijze/datawissing-op-locatie",
+    href: "/werkwijze/gratis-ophalen",
   },
   {
     num: "03",

@@ -224,9 +224,6 @@ const WatWijAannemen = () => {
             ))}
           </motion.div>
 
-          <p className="text-center text-muted-foreground text-sm mt-10 max-w-2xl mx-auto">
-            Twijfelt u of uw apparaat onder een uitsluiting valt? Stuur een foto via e-mail of WhatsApp. Wij denken graag mee.
-          </p>
         </div>
       </section>
 
