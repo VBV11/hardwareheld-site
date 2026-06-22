@@ -22,7 +22,7 @@ const BeloofteBar = () => {
             Geen minimum, geen voorrijkosten, geen offerte.
           </p>
           <p className="text-base text-muted-foreground">
-            Of u nu één laptop heeft of twintig werkplekken: wij komen langs en het ophalen is gratis. Doorgaans plannen wij een ophaalmoment binnen 2 à 3 werkdagen in.
+            Of u nu één laptop heeft of twintig werkplekken: wij komen langs en het ophalen is gratis.
           </p>
         </motion.div>
       </div>
