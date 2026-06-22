@@ -173,7 +173,7 @@ const DataveiligheidSection = () => {
           <div className="hidden md:flex justify-center">
             <img
               src={schrijvenImg}
-              alt="Gestapelde harde schijven — één geopend met zichtbare binnenkant"
+              alt="Gestapelde harde schijven, één geopend met zichtbare binnenkant"
               className="w-full max-w-[190px] h-auto drop-shadow-[0_20px_48px_rgba(0,0,0,0.65)]"
               draggable={false}
             />

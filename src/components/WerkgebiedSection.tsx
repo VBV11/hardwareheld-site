@@ -37,7 +37,7 @@ const WerkgebiedSection = () => {
           <div className="w-full max-w-[560px] md:max-w-[620px] mx-auto flex-shrink-0">
             <img
               src={limburgMap}
-              alt="Kaart van de provincie Limburg — werkgebied Hardware Held"
+              alt="Kaart van de provincie Limburg, werkgebied Hardware Held"
               className="w-full h-auto"
               draggable={false}
             />
