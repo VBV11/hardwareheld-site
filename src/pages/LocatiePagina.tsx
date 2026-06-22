@@ -65,7 +65,7 @@ const LocatiePagina = () => {
             </h1>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
               Heeft uw bedrijf in {stad.naam} oude computers, laptops of netwerkapparatuur die mag worden afgevoerd?
-              Hardware Held haalt gratis op — inclusief veilige datawissing en een bevestiging per apparaat.
+              Hardware Held haalt gratis op, inclusief veilige datawissing en een bevestiging per apparaat.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
@@ -186,7 +186,7 @@ const LocatiePagina = () => {
             </div>
             <p className="text-muted-foreground leading-relaxed text-sm">
               Hardware Held is actief in heel {stad.regio}. Naast {stad.naam} rijden wij ook naar{" "}
-              {buurt} en andere gemeenten in de regio. Er zijn geen reiskosten en geen minimumhoeveelheid —
+              {buurt} en andere gemeenten in de regio. Er zijn geen reiskosten en geen minimumhoeveelheid:
               of u nu één apparaat heeft of een volledige serverruimte wilt laten leeghalen.
             </p>
             <Link

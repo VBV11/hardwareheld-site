@@ -110,7 +110,7 @@ const HeroSection = () => {
             <div className="relative w-full max-w-lg">
               <img
                 src={opgehaaldImg}
-                alt="Opgehaalde bedrijfshardware — computers, laptops en monitoren klaar voor verwerking"
+                alt="Opgehaalde bedrijfshardware: computers, laptops en monitoren klaar voor verwerking"
                 className="w-full h-auto rounded-2xl shadow-[0_24px_80px_-16px_rgba(0,0,0,0.22)]"
                 draggable={false}
               />

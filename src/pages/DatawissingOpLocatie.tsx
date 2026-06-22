@@ -152,7 +152,7 @@ const DatawissingOpLocatie = () => {
               <div className="mt-6 flex justify-center">
                 <img
                   src={schrijvenImg}
-                  alt="Gestapelde harde schijven — één geopend met zichtbare binnenkant"
+                  alt="Gestapelde harde schijven, één geopend met zichtbare binnenkant"
                   className="w-full max-w-[160px] h-auto drop-shadow-lg"
                   draggable={false}
                 />

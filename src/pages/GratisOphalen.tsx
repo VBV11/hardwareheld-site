@@ -229,7 +229,7 @@ const GratisOphalen = () => {
               </div>
               <img
                 src={schrijvenImg}
-                alt="Gestapelde harde schijven — één geopend met zichtbare binnenkant"
+                alt="Gestapelde harde schijven, één geopend met zichtbare binnenkant"
                 className="hidden sm:block w-[120px] flex-shrink-0 h-auto drop-shadow-lg"
                 draggable={false}
               />
