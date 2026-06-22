@@ -15,6 +15,7 @@ const OverOns = lazy(() => import("./pages/OverOns"));
 const WatWijAannemen = lazy(() => import("./pages/WatWijAannemen"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Privacy = lazy(() => import("./pages/Privacy"));
+const LocatiePagina = lazy(() => import("./pages/LocatiePagina"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/over-ons" element={<OverOns />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/ophalen/:stad" element={<LocatiePagina />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
