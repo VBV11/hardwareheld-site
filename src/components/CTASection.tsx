@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const trust = [
   { icon: ShieldCheck, text: "Veilige datawissing" },
   { icon: MapPin, text: "Ophaalservice heel Limburg" },
-  { icon: Clock, text: "Reactie binnen 24 uur" },
+  { icon: Clock, text: "Reactie binnen 1 werkdag" },
 ];
 
 const trustContainer = {
@@ -82,10 +82,10 @@ const CTASection = () => {
               aria-hidden
             />
             <Link
-              to="/contact"
+              to="/aanmelden"
               className="btn-hover relative inline-flex items-center gap-2 min-h-[44px] px-9 py-4 bg-primary text-primary-foreground font-semibold rounded-full shadow-[0_20px_60px_-15px_hsl(25_100%_50%_/_0.7)] text-base"
             >
-              Neem contact op <ArrowRight size={18} />
+              Gratis ophalen aanvragen <ArrowRight size={18} />
             </Link>
           </div>
 

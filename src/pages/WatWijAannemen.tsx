@@ -240,7 +240,7 @@ const WatWijAannemen = () => {
               Twijfelt u of uw apparatuur in aanmerking komt?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Stuur een foto via e-mail of WhatsApp en u krijgt binnen 24 uur antwoord. Wij denken graag mee. Heeft u een grote partij hardware die u in één keer wilt afvoeren? Laat het weten, dan plannen wij een ophaalmoment in dat past.
+              Stuur een foto via e-mail of WhatsApp en u krijgt binnen 1 werkdag antwoord. Wij denken graag mee. Heeft u een grote partij hardware die u in één keer wilt afvoeren? Laat het weten, dan plannen wij een ophaalmoment in dat past.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a

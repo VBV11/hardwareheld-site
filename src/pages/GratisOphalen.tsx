@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import schrijvenImg from "@/assets/schrijven.png";
 
 const steps = [
-  { number: "1", title: "U neemt contact op", description: "Stuur een e-mail naar info@hardwareheld.nl of een WhatsApp naar 06 8337 3852. Vertel kort wat u heeft en waar u gevestigd bent. Wij reageren binnen 24 uur." },
+  { number: "1", title: "U neemt contact op", description: "Stuur een e-mail naar info@hardwareheld.nl of een WhatsApp naar 06 8337 3852. Vertel kort wat u heeft en waar u gevestigd bent. Wij reageren binnen 1 werkdag." },
   { number: "2", title: "Wij plannen een ophaalmoment", description: "Wij komen naar u toe op een tijdstip dat uitkomt. Volledig gratis, u hoeft niks in te pakken of te verzenden." },
   { number: "3", title: "Wij halen alles op", description: "Wij laden de hardware in. Bij de ophaling tekent u een eenvoudig overdrachtsformulier waarmee de eigendom formeel overgaat op Hardware Held en wij u de wisbevestiging kunnen sturen." },
   { number: "4", title: "Data wordt professioneel gewist", description: "Alle opslag wordt professioneel gewist met betrouwbare wissoftware. Data is daarna niet meer toegankelijk met standaard middelen." },

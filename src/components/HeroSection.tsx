@@ -5,7 +5,7 @@ import opgehaaldImg from "@/assets/opgehaald.png";
 
 const badges = [
   "100% gratis",
-  "Reactie <24u",
+  "Reactie binnen 1 werkdag",
   "Bewijs per apparaat",
   "MKB-specialist",
 ];
@@ -68,10 +68,10 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <Link
-                to="/contact"
+                to="/aanmelden"
                 className="btn-hover inline-flex items-center gap-2 min-h-[44px] px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full text-base shadow-[0_20px_60px_-15px_hsl(25_100%_50%_/_0.55)]"
               >
-                Plan gratis ophaling <ArrowRight size={18} />
+                Gratis ophalen aanvragen <ArrowRight size={18} />
               </Link>
               <Link
                 to="/werkwijze"
