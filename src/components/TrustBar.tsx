@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const items = [
   { icon: ShieldCheck, label: "100% gratis ophalen", sub: "Geen voorrijkosten" },
   { icon: FileCheck2, label: "Wisbevestiging", sub: "Per apparaat, gegarandeerd" },
-  { icon: Clock, label: "Reactie < 24 uur", sub: "Ook in het weekend" },
+  { icon: Clock, label: "Reactie binnen 1 werkdag", sub: "Ook in het weekend" },
   { icon: MapPin, label: "Lokaal in Limburg", sub: "Eén vast contactpersoon" },
 ];
 

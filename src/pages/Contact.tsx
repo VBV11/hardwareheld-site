@@ -2,15 +2,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SEO from "@/components/SEO";
-import { Mail, MapPin, ArrowRight, MessageCircle } from "lucide-react";
+import { Mail, MapPin, ArrowRight, MessageCircle, ClipboardList } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
     <div className="min-h-screen">
       <SEO
         title="Contact: ophaling of datawissing aanvragen | Hardware Held"
-        description="Vraag een gratis ophaling of datawissing op locatie aan in Zuid- en Midden-Limburg. Reactie binnen 24 uur via e-mail of WhatsApp."
+        description="Vraag een gratis ophaling of datawissing op locatie aan in Zuid- en Midden-Limburg. Reactie binnen 1 werkdag via e-mail of WhatsApp."
         canonical="https://hardwareheld.nl/contact"
         keywords="contact Hardware Held, hardware ophalen aanvragen, datawissing aanvragen, ophaalservice Limburg contact"
       />
@@ -36,7 +37,7 @@ const Contact = () => {
               Neem contact op
             </h1>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              Plan een gratis ophaalmoment of vraag datawissing op locatie aan. Wij reageren binnen 24 uur.
+              Plan een gratis ophaalmoment of vraag datawissing op locatie aan. Wij reageren binnen 1 werkdag.
             </p>
           </motion.div>
         </div>
@@ -44,6 +45,40 @@ const Contact = () => {
 
       <section className="relative pb-14 md:pb-20 bg-background overflow-hidden">
         <div className="container max-w-3xl relative z-10">
+          {/* Aanmeld formulier CTA */}
+          <motion.div
+            className="mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            <Link
+              to="/aanmelden"
+              className="group flex items-center justify-between p-6 rounded-2xl
+                bg-primary text-primary-foreground shadow-lg
+                hover:opacity-90 transition-all duration-200 hover:-translate-y-0.5
+                hover:shadow-[0_16px_40px_-12px_hsl(25_100%_50%_/_0.40)]"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+                  <ClipboardList size={24} />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-widest opacity-80 mb-0.5">
+                    Snelste weg
+                  </p>
+                  <p className="font-heading text-lg font-bold">
+                    ICT-apparatuur online aanmelden
+                  </p>
+                  <p className="text-sm opacity-80 mt-0.5">
+                    Vul het aanmeldformulier in — wij reageren binnen 1 werkdag
+                  </p>
+                </div>
+              </div>
+              <ArrowRight size={22} className="shrink-0 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
+
           {/* Contact grid */}
           <motion.div
             className="grid sm:grid-cols-2 gap-4"
@@ -112,7 +147,7 @@ const Contact = () => {
               Vermeld kort hoeveel apparaten het betreft, welke soort (computers, laptops, monitoren, netwerkapparatuur), uw bedrijfsnaam en locatie. Meer details mogen, maar hoeven niet.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed mt-3">
-              Daarna reageren wij binnen 24 uur met een voorstel voor gratis ophalen of datawissing op locatie, en plannen wij samen een moment dat u uitkomt.
+              Daarna reageren wij binnen 1 werkdag met een voorstel voor gratis ophalen of datawissing op locatie, en plannen wij samen een moment dat u uitkomt.
             </p>
           </motion.div>
 

@@ -161,9 +161,16 @@ const Navbar = () => {
           <Link
             to="/contact"
             onClick={handleNavClick}
-            className="ml-3 px-5 py-2.5 text-sm font-semibold bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity shadow-md shadow-primary/20"
+            className="ml-3 px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg"
           >
             Contact
+          </Link>
+          <Link
+            to="/aanmelden"
+            onClick={handleNavClick}
+            className="ml-1 px-5 py-2.5 text-sm font-semibold bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity shadow-md shadow-primary/20"
+          >
+            Aanmelden
           </Link>
         </div>
 
@@ -227,9 +234,16 @@ const Navbar = () => {
           <Link
             to="/contact"
             onClick={handleNavClick}
-            className="block mt-2 text-center px-5 py-2.5 text-sm font-semibold bg-primary text-primary-foreground rounded-lg"
+            className="block py-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Contact
+          </Link>
+          <Link
+            to="/aanmelden"
+            onClick={handleNavClick}
+            className="block mt-2 text-center px-5 py-2.5 text-sm font-semibold bg-primary text-primary-foreground rounded-lg"
+          >
+            Aanmelden
           </Link>
         </div>
       )}

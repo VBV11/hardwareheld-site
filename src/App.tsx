@@ -16,6 +16,7 @@ const WatWijAannemen = lazy(() => import("./pages/WatWijAannemen"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const LocatiePagina = lazy(() => import("./pages/LocatiePagina"));
+const Aanmelden = lazy(() => import("./pages/Aanmelden"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/wat-wij-aannemen" element={<WatWijAannemen />} />
             <Route path="/over-ons" element={<OverOns />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/aanmelden" element={<Aanmelden />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/ophalen/:stad" element={<LocatiePagina />} />
             <Route path="*" element={<NotFound />} />
