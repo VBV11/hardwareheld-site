@@ -6,6 +6,7 @@ interface SEOProps {
   canonical: string;
   keywords?: string;
   ogImage?: string;
+  structuredData?: object | object[];
 }
 
 const SEO = ({
@@ -14,6 +15,7 @@ const SEO = ({
   canonical,
   keywords,
   ogImage = "https://hardwareheld.nl/og-image.png",
+  structuredData,
 }: SEOProps) => (
   <Helmet>
     <title>{title}</title>
@@ -33,6 +35,12 @@ const SEO = ({
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+
+    {structuredData && (
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+    )}
   </Helmet>
 );
 

@@ -39,6 +39,36 @@ const LocatiePagina = () => {
 
   const buurt = stad.buurtgemeenten.slice(0, 3).join(", ");
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": `Gratis ophalen bedrijfshardware ${stad.naam}`,
+    "description": `Gratis ophalen van oude bedrijfshardware in ${stad.naam} en omgeving. Inclusief professionele datawissing met PDF-bevestiging per apparaat.`,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Hardware Held",
+      "email": "info@hardwareheld.nl",
+      "url": "https://hardwareheld.nl",
+      "image": "https://hardwareheld.nl/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sittard-Geleen",
+        "addressRegion": "Limburg",
+        "addressCountry": "NL",
+      },
+    },
+    "areaServed": [
+      { "@type": "City", "name": stad.naam },
+      ...stad.buurtgemeenten.map((g) => ({ "@type": "City", "name": g })),
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "description": "Gratis ophalen inclusief datawissing",
+    },
+  };
+
   return (
     <div className="min-h-screen">
       <SEO
@@ -46,6 +76,7 @@ const LocatiePagina = () => {
         description={`Gratis ophalen van oude bedrijfshardware in ${stad.naam}. Hardware Held haalt computers, laptops, monitoren en netwerkapparatuur kosteloos op in ${stad.naam} en omgeving. Inclusief veilige datawissing met bevestiging per apparaat.`}
         canonical={`https://hardwareheld.nl/ophalen/${stad.slug}`}
         keywords={`hardware ophalen ${stad.naam}, computers inleveren ${stad.naam}, laptops afvoeren ${stad.naam}, datawissing ${stad.naam}, bedrijfshardware ${stad.regio}`}
+        structuredData={structuredData}
       />
       <Navbar />
 
@@ -69,10 +100,10 @@ const LocatiePagina = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                to="/contact"
+                to="/aanmelden"
                 className="btn-hover inline-flex items-center justify-center gap-2 min-h-[44px] px-7 py-3.5 bg-primary text-primary-foreground font-semibold rounded-full shadow-[0_12px_40px_-12px_hsl(25_100%_50%_/_0.5)] text-sm"
               >
-                Plan gratis ophaling in {stad.naam} <ArrowRight size={16} />
+                Gratis ophalen aanvragen in {stad.naam} <ArrowRight size={16} />
               </Link>
               <Link
                 to="/werkwijze/gratis-ophalen"
@@ -190,7 +221,7 @@ const LocatiePagina = () => {
               of u nu één apparaat heeft of een volledige serverruimte wilt laten leeghalen.
             </p>
             <Link
-              to="/contact"
+              to="/aanmelden"
               className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-primary hover:underline underline-offset-4"
             >
               Ophaling aanvragen <ArrowRight size={14} />
