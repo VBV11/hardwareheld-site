@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { X, Check, FileCheck2 } from "lucide-react";
-import schrijvenImg from "@/assets/schrijven.png";
+import schrijvenImg from "@/assets/schrijven.webp";
 
 const vergelijking = [
   {

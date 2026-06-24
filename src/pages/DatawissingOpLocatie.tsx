@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 import { ShieldCheck, FileCheck, Lock } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import schrijvenImg from "@/assets/schrijven.png";
+import schrijvenImg from "@/assets/schrijven.webp";
 
 const steps = [
   { number: "1", title: "U neemt contact op", description: "Stuur een e-mail naar info@hardwareheld.nl of een WhatsApp naar 06 8337 3852 en laat weten hoeveel apparaten u wilt laten wissen." },
@@ -34,6 +34,16 @@ const cardVariants = {
   },
 };
 
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hardwareheld.nl/" },
+    { "@type": "ListItem", "position": 2, "name": "Werkwijze", "item": "https://hardwareheld.nl/werkwijze" },
+    { "@type": "ListItem", "position": 3, "name": "Datawissing op locatie", "item": "https://hardwareheld.nl/werkwijze/datawissing-op-locatie" },
+  ],
+};
+
 const DatawissingOpLocatie = () => {
   return (
     <div className="min-h-screen">
@@ -42,6 +52,7 @@ const DatawissingOpLocatie = () => {
         description="Veilige datawissing op locatie in Zuid- en Midden-Limburg tegen vast tarief. U houdt uw hardware en ontvangt een PDF-bevestiging per apparaat met serienummer."
         canonical="https://hardwareheld.nl/werkwijze/datawissing-op-locatie"
         keywords="datawissing op locatie, veilige datawissing bedrijf, harde schijf wissen, AVG datawissing, certificaat datawissing Limburg"
+        structuredData={breadcrumb}
       />
       <Navbar />
 

@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 import { Monitor, Laptop, Tv, Network, Truck, ShieldCheck, FileCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import schrijvenImg from "@/assets/schrijven.png";
+import schrijvenImg from "@/assets/schrijven.webp";
 
 const steps = [
   { number: "1", title: "U neemt contact op", description: "Stuur een e-mail naar info@hardwareheld.nl of een WhatsApp naar 06 8337 3852. Vertel kort wat u heeft en waar u gevestigd bent. Wij reageren binnen 1 werkdag." },
@@ -43,6 +43,16 @@ const cardVariants = {
   },
 };
 
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hardwareheld.nl/" },
+    { "@type": "ListItem", "position": 2, "name": "Werkwijze", "item": "https://hardwareheld.nl/werkwijze" },
+    { "@type": "ListItem", "position": 3, "name": "Gratis ophalen", "item": "https://hardwareheld.nl/werkwijze/gratis-ophalen" },
+  ],
+};
+
 const GratisOphalen = () => {
   return (
     <div className="min-h-screen">
@@ -51,6 +61,7 @@ const GratisOphalen = () => {
         description="Gratis ophalen oude bedrijfshardware in Zuid- en Midden-Limburg, inclusief veilige datawissing en PDF-bevestiging per apparaat. In 5 simpele stappen geregeld."
         canonical="https://hardwareheld.nl/werkwijze/gratis-ophalen"
         keywords="gratis ophalen bedrijfshardware, computers laten ophalen, laptops ophalen bedrijf, hardware afvoeren Limburg, MKB hardware ophaalservice"
+        structuredData={breadcrumb}
       />
       <Navbar />
 

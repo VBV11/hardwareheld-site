@@ -39,7 +39,17 @@ const LocatiePagina = () => {
 
   const buurt = stad.buurtgemeenten.slice(0, 3).join(", ");
 
-  const structuredData = {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hardwareheld.nl/" },
+      { "@type": "ListItem", "position": 2, "name": "Ophalen per stad", "item": "https://hardwareheld.nl/ophalen/sittard-geleen" },
+      { "@type": "ListItem", "position": 3, "name": stad.naam, "item": `https://hardwareheld.nl/ophalen/${stad.slug}` },
+    ],
+  };
+
+  const structuredData = [breadcrumb, {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": `Gratis ophalen bedrijfshardware ${stad.naam}`,
@@ -67,7 +77,7 @@ const LocatiePagina = () => {
       "priceCurrency": "EUR",
       "description": "Gratis ophalen inclusief datawissing",
     },
-  };
+  }];
 
   return (
     <div className="min-h-screen">

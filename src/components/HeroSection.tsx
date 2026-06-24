@@ -1,7 +1,7 @@
 import { ArrowRight, ChevronRight, CheckCircle, Recycle } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import opgehaaldImg from "@/assets/opgehaald.png";
+import opgehaaldImg from "@/assets/opgehaald.webp";
 
 const badges = [
   "100% gratis",
@@ -113,6 +113,8 @@ const HeroSection = () => {
                 alt="Opgehaalde bedrijfshardware: computers, laptops en monitoren klaar voor verwerking"
                 className="w-full h-auto rounded-2xl shadow-[0_24px_80px_-16px_rgba(0,0,0,0.22)]"
                 draggable={false}
+                fetchPriority="high"
+                decoding="async"
               />
 
               {/* Floating trust pill */}

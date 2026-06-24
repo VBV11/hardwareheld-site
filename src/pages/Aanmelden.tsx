@@ -6,14 +6,24 @@ import AanmeldFormulier from "@/components/AanmeldFormulier";
 import { motion } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
 
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hardwareheld.nl/" },
+    { "@type": "ListItem", "position": 2, "name": "Gratis ophalen aanvragen", "item": "https://hardwareheld.nl/aanmelden" },
+  ],
+};
+
 export default function Aanmelden() {
   return (
     <div className="min-h-screen">
       <SEO
-        title="ICT-apparatuur aanmelden | Hardware Held"
-        description="Meld uw ICT-apparatuur gratis aan voor ophaling in en rond Sittard-Geleen. Ophalen én AVG-conform datawissen is altijd gratis."
+        title="Gratis ophalen aanvragen Limburg | Hardware Held"
+        description="Vraag gratis ophaling aan van uw bedrijfshardware in Zuid- en Midden-Limburg. Ophalen én datawissen is altijd gratis, inclusief PDF-bevestiging per apparaat."
         canonical="https://hardwareheld.nl/aanmelden"
-        keywords="ICT apparatuur aanmelden, hardware ophalen aanvragen, Limburg hardware ophalen formulier"
+        keywords="gratis ophalen aanvragen, hardware ophalen formulier Limburg, ICT apparatuur aanmelden, computers laten ophalen"
+        structuredData={breadcrumb}
       />
       <Navbar />
 

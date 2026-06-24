@@ -6,6 +6,15 @@ import { ArrowRight, Truck, HardDrive, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hardwareheld.nl/" },
+    { "@type": "ListItem", "position": 2, "name": "Werkwijze", "item": "https://hardwareheld.nl/werkwijze" },
+  ],
+};
+
 const Werkwijze = () => {
   return (
     <div className="min-h-screen">
@@ -14,6 +23,7 @@ const Werkwijze = () => {
         description="Zo werkt het gratis ophalen van oude bedrijfshardware en de datawissing op locatie bij Hardware Held in Limburg. Veilig, met PDF-bevestiging per apparaat."
         canonical="https://hardwareheld.nl/werkwijze"
         keywords="werkwijze hardware ophalen, datawissing op locatie, veilige datawissing bedrijf, hardware ophaalservice Limburg"
+        structuredData={breadcrumb}
       />
       <Navbar />
 

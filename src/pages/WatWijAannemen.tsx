@@ -99,6 +99,15 @@ const cardVariants = {
   },
 };
 
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hardwareheld.nl/" },
+    { "@type": "ListItem", "position": 2, "name": "Wat wij aannemen", "item": "https://hardwareheld.nl/wat-wij-aannemen" },
+  ],
+};
+
 const WatWijAannemen = () => {
   return (
     <div className="min-h-screen">
@@ -107,6 +116,7 @@ const WatWijAannemen = () => {
         description="Wij nemen alle gangbare bedrijfshardware aan: computers, laptops, monitoren en netwerkapparatuur. Werkend of defect, alle merken. Gratis ophalen in Limburg."
         canonical="https://hardwareheld.nl/wat-wij-aannemen"
         keywords="welke hardware inleveren, computers inleveren bedrijf, oude laptops afvoeren, monitoren recyclen, netwerkapparatuur inleveren, defecte hardware ophalen"
+        structuredData={breadcrumb}
       />
       <Navbar />
 
