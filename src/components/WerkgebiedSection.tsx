@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import limburgMap from "@/assets/limburg.png";
+import limburgMap from "@/assets/limburg.webp";
 
 const WerkgebiedSection = () => {
   return (
