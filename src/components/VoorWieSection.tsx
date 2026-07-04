@@ -43,7 +43,7 @@ const VoorWieSection = () => {
             <span className="font-bold text-foreground">Elk bedrijf met oude hardware.</span> Van kantoor en werkplaats tot praktijk, winkel of bouwbedrijf, en ook als zzp'er: wij halen het op.
           </p>
           <p className="text-base text-muted-foreground leading-relaxed max-w-2xl mx-auto text-center mt-4">
-            Eén laptop of twintig werkplekken: er is geen minimum en wij komen altijd langs.
+            Van één toestel tot een volledig kantoor vol apparatuur: er is geen minimum en wij komen altijd langs.
           </p>
         </motion.div>
 

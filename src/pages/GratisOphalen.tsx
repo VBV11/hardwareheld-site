@@ -231,7 +231,7 @@ const GratisOphalen = () => {
                   <h2 className="font-heading text-xl md:text-2xl font-bold">Hoe zit het met datawissing?</h2>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  Bij gratis ophalen is professionele datawissing standaard inbegrepen. Zodra wij de hardware hebben opgehaald, wordt de opslag uit elk apparaat gehaald en gewist met betrouwbare wissoftware. Binnen 14 dagen na ophaling ontvangt u per e-mail een PDF-bevestiging per apparaat, met serienummer, datum en gebruikte software. Wilt u de hardware liever houden en alleen de data laten wissen? Bekijk dan onze{" "}
+                  Bij gratis ophalen is professionele datawissing standaard inbegrepen. Zodra wij de hardware hebben opgehaald, wordt de opslag uit elk apparaat gehaald en gewist met betrouwbare wissoftware, waarna u de bevestiging ontvangt zoals hierboven beschreven. Wilt u de hardware liever houden en alleen de data laten wissen? Bekijk dan onze{" "}
                   <Link to="/werkwijze/datawissing-op-locatie" className="text-primary font-medium hover:underline">
                     datawissing op locatie
                   </Link>

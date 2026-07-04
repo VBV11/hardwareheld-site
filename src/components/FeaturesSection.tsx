@@ -8,7 +8,7 @@ const features = [
     icon: Truck,
     title: "Gratis ophalen",
     description:
-      "Wij komen op afspraak langs en nemen alle oude apparatuur mee. Onze vergoeding zit in de restwaarde van de hardware, niet bij u als klant.",
+      "Wij komen op afspraak langs en nemen alle oude apparatuur mee. Geen voorrijkosten, geen kosten per apparaat, voor elk bedrijf in Zuid- en Midden-Limburg.",
     href: "/werkwijze/gratis-ophalen",
   },
   {

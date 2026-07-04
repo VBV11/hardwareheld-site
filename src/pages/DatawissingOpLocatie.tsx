@@ -155,7 +155,7 @@ const DatawissingOpLocatie = () => {
                 Wij wissen alle opslag met betrouwbare, veelgebruikte wissoftware. Data is daarna niet meer toegankelijk met standaard middelen.
               </p>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                In de praktijk wissen wij de opslag ter plekke bij u op kantoor. Afhankelijk van het apparaat gebeurt dit via het apparaat zelf of via een aansluiting op onze apparatuur, altijd binnen uw pand. Binnen 14 dagen na de wissing ontvangt u per e-mail een PDF-bevestiging per apparaat, met serienummer, datum en gebruikte software.
+                In de praktijk wissen wij de opslag ter plekke bij u op kantoor. Afhankelijk van het apparaat gebeurt dit via het apparaat zelf of via een aansluiting op onze apparatuur, altijd binnen uw pand. U hoeft er zelf niets voor te doen.
               </p>
               <p className="text-foreground text-sm font-medium">
                 Uw hardware verlaat uw kantoor niet.
