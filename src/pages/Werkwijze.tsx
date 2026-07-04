@@ -77,7 +77,7 @@ const Werkwijze = () => {
                 Wij komen naar u toe en nemen uw oude bedrijfshardware mee. Volledig kosteloos, inclusief professionele datawissing. U hoeft niks in te pakken of te verzenden.
               </p>
               <ul className="space-y-3 mb-8 flex-1">
-                {["Volledig gratis", "Inclusief veilige datawissing", "Bevestiging per apparaat"].map((item) => (
+                {["Geen voorrijkosten of verborgen kosten", "Inclusief veilige datawissing", "Bevestiging per apparaat"].map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm">
                     <Check className="text-primary flex-shrink-0 mt-0.5" size={16} aria-hidden />
                     <span>{item}</span>
@@ -116,7 +116,7 @@ const Werkwijze = () => {
                 Wilt u uw hardware houden? Wij komen bij u langs en wissen alle bedrijfsdata professioneel ter plekke. U ontvangt een bevestiging per apparaat.
               </p>
               <ul className="space-y-3 mb-8 flex-1">
-                {["Vast tarief per apparaat", "U houdt uw hardware", "Met bevestiging per apparaat"].map((item) => (
+                {["Transparante prijs vooraf", "U houdt uw hardware", "Met bevestiging per apparaat"].map((item) => (
                   <li key={item} className="flex items-start gap-2.5 text-sm">
                     <Check className="text-primary flex-shrink-0 mt-0.5" size={16} aria-hidden />
                     <span>{item}</span>

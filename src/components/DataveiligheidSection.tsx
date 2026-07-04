@@ -28,7 +28,7 @@ const stappen = [
   { num: "2", tekst: "Elke schijf wordt gewist met professionele software" },
   {
     num: "3",
-    tekst: "U ontvangt per apparaat een bevestiging: serienummer, datum en gebruikte software",
+    tekst: "U ontvangt het bewijs per e-mail: zwart op wit dat de data is verwijderd",
   },
 ];
 

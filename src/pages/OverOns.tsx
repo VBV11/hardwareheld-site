@@ -10,7 +10,7 @@ const values = [
     icon: Cpu,
     title: "Tegen verspilling",
     description:
-      "Veel hardware die wordt weggegooid werkt nog prima. Drie, vier jaar oud, doet nog wat het moet doen. Wij halen die apparaten op en brengen ze terug in omloop in plaats van ze te laten verdwijnen.",
+      "Bruikbare apparatuur hoort niet in een kast of op de stort. Wij zorgen dat het weer wordt ingezet, bij een ander bedrijf of via verantwoorde recycling.",
   },
   {
     icon: ShieldCheck,

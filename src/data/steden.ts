@@ -162,7 +162,7 @@ export const steden: Stad[] = [
     slug: "leudal",
     naam: "Leudal",
     regio: "Midden-Limburg",
-    buurtgemeenten: ["Weert", "Roermond", "Niederweert"],
+    buurtgemeenten: ["Weert", "Roermond", "Nederweert"],
   },
   {
     slug: "nederweert",

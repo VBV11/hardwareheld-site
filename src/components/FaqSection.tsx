@@ -9,11 +9,11 @@ import {
 const faqs = [
   {
     q: "Wat kost het ophalen van oude bedrijfshardware?",
-    a: "Het ophalen is volledig gratis. Wij rekenen geen voorrijkosten en geen kosten per apparaat. De dataverwijdering is bij het ophalen inbegrepen.",
+    a: "Het ophalen is volledig gratis. Wij rekenen geen voorrijkosten en geen kosten per apparaat. De veilige datawissing is bij het ophalen inbegrepen.",
   },
   {
     q: "Hoe veilig is de datawissing?",
-    a: "Wij wissen elke gegevensdrager met professionele wissoftware. Binnen 14 dagen na ophaling ontvangt u per e-mail een overzicht per apparaat, met serienummer, datum en gebruikte software.",
+    a: "Wij wissen elke gegevensdrager met professionele wissoftware. Binnen 14 dagen na ophaling ontvangt u per e-mail een PDF-bevestiging per apparaat, met serienummer, datum en gebruikte software.",
   },
   {
     q: "In welk gebied halen jullie op?",
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Welke hardware nemen jullie aan?",
-    a: "Wij nemen alle zakelijke computers, laptops, monitoren en netwerkapparatuur aan. Twijfelt u of uw apparatuur in aanmerking komt? Stuur een foto via e-mail of WhatsApp en u krijgt spoedig antwoord.",
+    a: "Wij nemen alle zakelijke computers, laptops, monitoren en netwerkapparatuur aan. Twijfelt u of uw apparatuur in aanmerking komt? Stuur een foto via e-mail of WhatsApp en u krijgt binnen 24 uur antwoord.",
   },
   {
     q: "Wat doen jullie met de hardware na het ophalen?",
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "Moet ik de computers eerst zelf wissen?",
-    a: "Nee, dat hoeft niet. Wij wissen de gegevens voor u en sturen binnen 14 dagen per e-mail een bewijs van wisbevestiging met serienummer, datum en gebruikte software.",
+    a: "Nee, dat hoeft niet. Wij wissen de gegevens voor u en sturen binnen 14 dagen per e-mail een PDF-bevestiging per apparaat met serienummer, datum en gebruikte software.",
   },
   {
     q: "Werken jullie ook voor zzp'ers en kleine bedrijven?",
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     q: "Hoe verschilt jullie aanpak van een kringloop of recycler?",
-    a: "Bij Hardware Held ontvangt u per e-mail een digitale bevestiging van de datawissing per apparaat, met serienummer, datum en gebruikte software. Veel inleverpunten geven die zekerheid niet.",
+    a: "Bij Hardware Held ontvangt u per e-mail een PDF-bevestiging van de datawissing per apparaat, met serienummer, datum en gebruikte software. Veel inleverpunten geven die zekerheid niet.",
   },
   {
     q: "Wat is datawissing op locatie en wanneer kies ik daarvoor?",
