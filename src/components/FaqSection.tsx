@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Welke hardware nemen jullie aan?",
-    a: "Wij nemen alle zakelijke computers, laptops, monitoren en netwerkapparatuur aan. Twijfelt u of uw apparatuur in aanmerking komt? Stuur een foto via e-mail of WhatsApp en u krijgt binnen 24 uur antwoord.",
+    a: "Wij nemen alle zakelijke computers, laptops, monitoren en netwerkapparatuur aan. Twijfelt u of uw apparatuur in aanmerking komt? Stuur een foto via e-mail of WhatsApp en u krijgt binnen 1 werkdag antwoord.",
   },
   {
     q: "Wat doen jullie met de hardware na het ophalen?",

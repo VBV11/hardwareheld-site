@@ -36,12 +36,17 @@ const routes = [
   {
     path: "contact",
     title: "Contact: ophaling of datawissing aanvragen | Hardware Held",
-    description: "Vraag een gratis ophaling of datawissing op locatie aan in Zuid- en Midden-Limburg. Reactie binnen 24 uur via e-mail of WhatsApp.",
+    description: "Vraag een gratis ophaling of datawissing op locatie aan in Zuid- en Midden-Limburg. Reactie binnen 1 werkdag via e-mail of WhatsApp.",
   },
   {
     path: "privacy",
     title: "Privacyverklaring | Hardware Held",
     description: "Hoe Hardware Held omgaat met uw persoonsgegevens conform de AVG. Transparant, veilig en alleen voor de uitvoering van onze dienstverlening.",
+  },
+  {
+    path: "aanmelden",
+    title: "Gratis ophalen aanvragen Limburg | Hardware Held",
+    description: "Vraag gratis ophaling aan van uw bedrijfshardware in Zuid- en Midden-Limburg. Ophalen én datawissen is altijd gratis, inclusief PDF-bevestiging per apparaat.",
   },
 ];
 
