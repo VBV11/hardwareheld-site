@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SEO from "@/components/SEO";
-import { motion } from "framer-motion";
+import PageHero from "@/components/PageHero";
 
 const Privacy = () => {
   return (
@@ -14,45 +14,18 @@ const Privacy = () => {
       />
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-16 bg-background overflow-hidden">
-        <div
-          className="absolute top-10 left-0 w-[500px] h-[500px] opacity-[0.04] pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(circle at center, hsl(25 100% 50%), transparent 60%)",
-          }}
+      <main>
+        <PageHero
+          kruimels={[{ naam: "Privacyverklaring" }]}
+          titel="Privacyverklaring"
+          intro="Hoe wij omgaan met uw gegevens."
         />
-        <div className="container max-w-3xl text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-medium text-primary border border-primary/30 rounded-full">
-              Privacy
-            </span>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-              Privacyverklaring
-            </h1>
-            <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              Hoe wij omgaan met uw gegevens.
-            </p>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Content */}
-      <section className="relative py-16 bg-background overflow-hidden">
-        <div className="container max-w-3xl relative z-10">
-          <motion.article
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-card rounded-2xl p-8 md:p-12 shadow-sm border border-border space-y-8"
-          >
+        <section className="py-10 md:py-16">
+          <article className="container max-w-3xl space-y-8">
             <div>
               <p className="text-sm text-muted-foreground mb-4">
-                Laatst bijgewerkt: 16-04-2026
+                Laatst bijgewerkt: 30-10-2026
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Hardware Held respecteert uw privacy en gaat zorgvuldig om met uw persoonsgegevens. In deze verklaring leest u welke gegevens wij verzamelen, waarom wij dat doen, en welke rechten u heeft.
@@ -60,7 +33,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl md:text-2xl font-bold mb-3">
+              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
                 1. Wie zijn wij?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -69,14 +42,13 @@ const Privacy = () => {
               <p className="text-muted-foreground leading-relaxed font-medium mb-2">Contact:</p>
               <ul className="list-disc pl-6 space-y-1 text-muted-foreground leading-relaxed">
                 <li>E-mail: info@hardwareheld.nl</li>
-                <li>WhatsApp: NUMMER-VERWIJDERD</li>
                 <li>Vestigingsplaats: Sittard-Geleen, Limburg</li>
                 <li>KVK-nummer: in aanvraag</li>
               </ul>
             </div>
 
             <div>
-              <h2 className="font-heading text-xl md:text-2xl font-bold mb-3">
+              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
                 2. Welke persoonsgegevens verzamelen wij?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-3">
@@ -93,7 +65,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl md:text-2xl font-bold mb-3">
+              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
                 3. Waarom verzamelen wij deze gegevens?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-3">
@@ -109,7 +81,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl md:text-2xl font-bold mb-3">
+              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
                 4. Op welke grondslag verwerken wij uw gegevens?
               </h2>
               <ul className="list-disc pl-6 space-y-1 text-muted-foreground leading-relaxed">
@@ -121,7 +93,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl md:text-2xl font-bold mb-3">
+              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
                 5. Hoe lang bewaren wij uw gegevens?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-3">
@@ -135,7 +107,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl md:text-2xl font-bold mb-3">
+              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
                 6. Delen wij uw gegevens met derden?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -155,7 +127,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl md:text-2xl font-bold mb-3">
+              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
                 7. Hoe beveiligen wij uw gegevens?
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -164,7 +136,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl md:text-2xl font-bold mb-3">
+              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
                 8. Wat gebeurt er met data op opgehaalde hardware?
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -173,7 +145,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl md:text-2xl font-bold mb-3">
+              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
                 9. Welke rechten heeft u?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-3">
@@ -190,7 +162,7 @@ const Privacy = () => {
               </ul>
               <p className="text-muted-foreground leading-relaxed">
                 Wilt u gebruik maken van een van deze rechten? Stuur een e-mail naar{" "}
-                <a href="mailto:info@hardwareheld.nl" className="text-primary hover:underline">
+                <a href="mailto:info@hardwareheld.nl" className="tekstlink">
                   info@hardwareheld.nl
                 </a>
                 . Wij reageren binnen 30 dagen.
@@ -198,7 +170,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl md:text-2xl font-bold mb-3">
+              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
                 10. Cookies en logbestanden
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -213,12 +185,12 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl md:text-2xl font-bold mb-3">
+              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
                 11. Klachten
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Bent u niet tevreden over hoe wij met uw gegevens omgaan? Neem dan eerst contact met ons op via{" "}
-                <a href="mailto:info@hardwareheld.nl" className="text-primary hover:underline">
+                <a href="mailto:info@hardwareheld.nl" className="tekstlink">
                   info@hardwareheld.nl
                 </a>
                 . U heeft ook het recht om een klacht in te dienen bij de Autoriteit Persoonsgegevens via{" "}
@@ -226,7 +198,7 @@ const Privacy = () => {
                   href="https://autoriteitpersoonsgegevens.nl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:underline"
+                  className="tekstlink"
                 >
                   autoriteitpersoonsgegevens.nl
                 </a>
@@ -235,16 +207,16 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl md:text-2xl font-bold mb-3">
+              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
                 12. Wijzigingen
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Wij kunnen deze privacyverklaring van tijd tot tijd aanpassen. De meest actuele versie vindt u altijd op hardwareheld.nl/privacy.
               </p>
             </div>
-          </motion.article>
-        </div>
-      </section>
+          </article>
+        </section>
+      </main>
 
       <Footer />
       <ScrollToTopButton />

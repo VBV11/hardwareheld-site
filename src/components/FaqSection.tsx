@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Sectie from "./Sectie";
 
 const faqs = [
   {
@@ -21,7 +22,7 @@ const faqs = [
   },
   {
     q: "Welke hardware nemen jullie aan?",
-    a: "Wij nemen alle zakelijke computers, laptops, monitoren en netwerkapparatuur aan. Twijfelt u of uw apparatuur in aanmerking komt? Stuur een foto via e-mail of WhatsApp en u krijgt binnen 1 werkdag antwoord.",
+    a: "Wij nemen alle zakelijke computers, laptops, monitoren en netwerkapparatuur aan. Twijfelt u of uw apparatuur in aanmerking komt? Stuur een foto per e-mail en u krijgt binnen 1 werkdag antwoord.",
   },
   {
     q: "Wat doen jullie met de hardware na het ophalen?",
@@ -55,47 +56,29 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section id="faq" className="relative py-16 md:py-24 bg-secondary/30 overflow-hidden">
-      <div className="container max-w-3xl relative z-10">
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          <span className="inline-block text-xs font-semibold text-primary uppercase tracking-widest mb-3 px-3 py-1 rounded-full bg-primary/[0.08] border border-primary/15">
-            FAQ
-          </span>
-          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-center mb-4">
-            Veelgestelde vragen
-          </h2>
-          <p className="text-base md:text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12 md:mb-14">
-            Antwoord op de vragen die wij het vaakst krijgen.
-          </p>
-        </motion.div>
-
-        <Accordion type="multiple" className="w-full">
-          {faqs.map((faq, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.04, duration: 0.4 }}
-            >
-              <AccordionItem value={`item-${i}`} className="border-border">
-                <AccordionTrigger className="font-heading text-left text-base font-semibold hover:no-underline">
-                  {faq.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
-                  {faq.a}
-                </AccordionContent>
-              </AccordionItem>
-            </motion.div>
-          ))}
-        </Accordion>
-      </div>
-    </section>
+    <Sectie
+      id="faq"
+      titel="Veelgestelde vragen"
+      intro="Antwoord op de vragen die wij het vaakst krijgen."
+      actie={
+        <Link to="/contact" className="tekstlink">
+          Staat uw vraag er niet bij?
+        </Link>
+      }
+    >
+      <Accordion type="multiple" className="w-full border-t-2 border-foreground">
+        {faqs.map((faq, i) => (
+          <AccordionItem key={faq.q} value={`item-${i}`}>
+            <AccordionTrigger className="gap-4 py-5 text-left font-heading text-lg font-bold leading-snug hover:no-underline">
+              {faq.q}
+            </AccordionTrigger>
+            <AccordionContent className="max-w-prose pb-5 text-base leading-relaxed text-muted-foreground">
+              {faq.a}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </Sectie>
   );
 };
 

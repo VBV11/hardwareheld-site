@@ -7,17 +7,22 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1.25rem",
+        md: "2rem",
+      },
       screens: {
-        "2xl": "1400px",
+        "2xl": "1280px",
       },
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        heading: ["Space Grotesk", "system-ui", "sans-serif"],
+        sans: ["Archivo", "system-ui", "sans-serif"],
+        heading: ["Archivo", "system-ui", "sans-serif"],
       },
       colors: {
+        inkt: "hsl(var(--inkt))",
+        led: "hsl(var(--led))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

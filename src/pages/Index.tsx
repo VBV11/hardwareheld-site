@@ -1,15 +1,12 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import BeloofteBar from "@/components/BeloofteBar";
+import StappenSection from "@/components/StappenSection";
 import DataveiligheidSection from "@/components/DataveiligheidSection";
-import BelofteSection from "@/components/BelofteSection";
+import DienstenSection from "@/components/DienstenSection";
 import ProductsSection from "@/components/ProductsSection";
-import VoorWieSection from "@/components/VoorWieSection";
 import WerkgebiedSection from "@/components/WerkgebiedSection";
 import FaqSection from "@/components/FaqSection";
 import AanmeldSection from "@/components/AanmeldSection";
-import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SEO from "@/components/SEO";
@@ -24,17 +21,16 @@ const Index = () => {
         keywords="bedrijfshardware ophalen, gratis ophalen computers, datawissing Limburg, oude laptops inleveren, hardware recyclen MKB, Sittard-Geleen, Maastricht, Heerlen, Roermond, Weert"
       />
       <Navbar />
-      <HeroSection />
-      <BeloofteBar />
-      <FeaturesSection />
-      <DataveiligheidSection />
-      <BelofteSection />
-      <ProductsSection />
-      <VoorWieSection />
-      <WerkgebiedSection />
-      <FaqSection />
-      <AanmeldSection />
-      <CTASection />
+      <main>
+        <HeroSection />
+        <StappenSection />
+        <DataveiligheidSection />
+        <DienstenSection />
+        <ProductsSection />
+        <WerkgebiedSection />
+        <FaqSection />
+        <AanmeldSection />
+      </main>
       <Footer />
       <ScrollToTopButton />
     </div>

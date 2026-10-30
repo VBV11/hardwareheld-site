@@ -9,47 +9,32 @@ type NavLink = {
   children?: { label: string; href: string }[];
 };
 
+const links: NavLink[] = [
+  {
+    label: "Werkwijze",
+    href: "/werkwijze",
+    children: [
+      { label: "Overzicht", href: "/werkwijze" },
+      { label: "Gratis ophalen", href: "/werkwijze/gratis-ophalen" },
+      { label: "Datawissing op locatie", href: "/werkwijze/datawissing-op-locatie" },
+    ],
+  },
+  { label: "Wat wij aannemen", href: "/wat-wij-aannemen" },
+  { label: "Over ons", href: "/over-ons" },
+  { label: "Veelgestelde vragen", href: "/#faq" },
+  { label: "Contact", href: "/contact" },
+];
+
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [werkwijzeOpen, setWerkwijzeOpen] = useState(false);
-  const [mobileWerkwijzeOpen, setMobileWerkwijzeOpen] = useState(false);
   const closeTimer = useRef<number | null>(null);
   const location = useLocation();
-  const isHome = location.pathname === "/";
-  const isTransparent = isHome && !scrolled;
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     setMobileOpen(false);
     setWerkwijzeOpen(false);
-    setMobileWerkwijzeOpen(false);
   }, [location.pathname, location.hash]);
-
-  const links: NavLink[] = [
-    { label: "Home", href: "/" },
-    {
-      label: "Werkwijze",
-      href: "/werkwijze",
-      children: [
-        { label: "Overzicht", href: "/werkwijze" },
-        { label: "Gratis ophalen", href: "/werkwijze/gratis-ophalen" },
-        { label: "Datawissing op locatie", href: "/werkwijze/datawissing-op-locatie" },
-      ],
-    },
-    { label: "Over ons", href: "/over-ons" },
-    { label: "Wat wij aannemen", href: "/wat-wij-aannemen" },
-    { label: "FAQ", href: "/#faq" },
-  ];
-
-  const handleNavClick = () => {
-    setMobileOpen(false);
-  };
 
   const handleHomeClick = (e: React.MouseEvent) => {
     setMobileOpen(false);
@@ -70,28 +55,21 @@ const Navbar = () => {
   };
 
   const isActive = (href: string) =>
-    href === "/"
-      ? location.pathname === "/"
-      : location.pathname === href || location.pathname.startsWith(href + "/");
+    location.pathname === href || location.pathname.startsWith(href + "/");
+
+  const linkKlasse = (href: string) =>
+    `rounded px-3 py-2 text-[0.9375rem] font-medium transition-colors ${
+      isActive(href) ? "text-foreground underline decoration-primary decoration-2 underline-offset-8" : "text-foreground/75 hover:text-foreground"
+    }`;
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isTransparent
-          ? "bg-transparent"
-          : "bg-background/95 backdrop-blur-md shadow-sm border-b border-border"
-      }`}
-    >
-      <div className="container flex items-center justify-between h-16">
+    <nav aria-label="Hoofdmenu" className="fixed left-0 right-0 top-0 z-50 border-b-2 border-foreground bg-background">
+      <div className="container flex h-[4.25rem] items-center justify-between gap-4">
         <Link to="/" className="flex-shrink-0" onClick={handleHomeClick}>
-          <img
-            src={logo}
-            alt="Hardware Held"
-            className="h-10 transition-all duration-300"
-          />
+          <img src={logo} alt="Hardware Held" width={153} height={40} className="h-9 w-auto md:h-10" />
         </Link>
 
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden items-center gap-0.5 lg:flex">
           {links.map((link) =>
             link.children ? (
               <div
@@ -99,40 +77,33 @@ const Navbar = () => {
                 className="relative"
                 onMouseEnter={openDropdown}
                 onMouseLeave={scheduleClose}
+                onFocus={openDropdown}
+                onBlur={scheduleClose}
               >
                 <Link
                   to={link.href}
-                  onClick={handleNavClick}
                   aria-haspopup="true"
                   aria-expanded={werkwijzeOpen}
-                  className={`flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                    isActive(link.href)
-                      ? "text-foreground"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
+                  className={`flex items-center gap-1 ${linkKlasse(link.href)}`}
                 >
                   {link.label}
                   <ChevronDown
                     size={14}
+                    aria-hidden
                     className={`transition-transform ${werkwijzeOpen ? "rotate-180" : ""}`}
                   />
                 </Link>
                 {werkwijzeOpen && (
-                  <div
-                    className="absolute left-0 top-full pt-2 w-64"
-                    onMouseEnter={openDropdown}
-                    onMouseLeave={scheduleClose}
-                  >
-                    <div className="rounded-xl border border-border bg-background shadow-lg overflow-hidden animate-fade-in">
+                  <div className="absolute left-0 top-full w-64 pt-3">
+                    <div className="animate-fade-in overflow-hidden rounded border-2 border-foreground bg-background">
                       {link.children.map((child) => (
                         <Link
                           key={child.href}
                           to={child.href}
-                          onClick={handleNavClick}
-                          className={`block px-4 py-2.5 text-sm transition-colors ${
+                          className={`block px-4 py-3 text-[0.9375rem] transition-colors ${
                             location.pathname === child.href
-                              ? "text-primary bg-primary/5 font-medium"
-                              : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                              ? "bg-muted font-semibold"
+                              : "hover:bg-muted"
                           }`}
                         >
                           {child.label}
@@ -143,108 +114,57 @@ const Navbar = () => {
                 )}
               </div>
             ) : (
-              <Link
-                key={link.label}
-                to={link.href}
-                onClick={link.href === "/" ? handleHomeClick : handleNavClick}
-                className={`px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                  location.pathname === link.href
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
+              <Link key={link.label} to={link.href} className={linkKlasse(link.href)}>
                 {link.label}
               </Link>
             )
           )}
 
-          <Link
-            to="/contact"
-            onClick={handleNavClick}
-            className="ml-3 px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg"
-          >
-            Contact
-          </Link>
-          <Link
-            to="/aanmelden"
-            onClick={handleNavClick}
-            className="ml-1 px-5 py-2.5 text-sm font-semibold bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity shadow-md shadow-primary/20"
-          >
-            Aanmelden
+          <Link to="/aanmelden" className="knop knop-oranje ml-3 min-h-[44px] px-5 text-[0.9375rem]">
+            Ophalen aanvragen
           </Link>
         </div>
 
-        <button
-          className="md:hidden p-2 text-foreground"
-          onClick={() => setMobileOpen((open) => !open)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <Link to="/aanmelden" className="knop knop-oranje min-h-[44px] px-4 text-sm">
+            Aanvragen
+          </Link>
+          <button
+            type="button"
+            className="flex h-11 w-11 items-center justify-center rounded text-foreground"
+            onClick={() => setMobileOpen((open) => !open)}
+            aria-label={mobileOpen ? "Menu sluiten" : "Menu openen"}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={26} aria-hidden /> : <Menu size={26} aria-hidden />}
+          </button>
+        </div>
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-background border-t border-border px-4 pb-4 animate-fade-in">
-          {links.map((link) =>
-            link.children ? (
-              <div key={link.label}>
-                <button
-                  type="button"
-                  onClick={() => setMobileWerkwijzeOpen((o) => !o)}
-                  className="w-full flex items-center justify-between py-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                  aria-expanded={mobileWerkwijzeOpen}
-                >
+        <div className="max-h-[calc(100vh-4.25rem)] animate-fade-in overflow-y-auto border-t border-border bg-background lg:hidden">
+          <ul className="container py-2">
+            {links.map((link) => (
+              <li key={link.label}>
+                <Link to={link.href} className="block border-b border-border py-3.5 font-medium last:border-b-0">
                   {link.label}
-                  <ChevronDown
-                    size={16}
-                    className={`transition-transform ${mobileWerkwijzeOpen ? "rotate-180" : ""}`}
-                  />
-                </button>
-                {mobileWerkwijzeOpen && (
-                  <div className="pl-4 border-l border-border ml-1 mb-2">
-                    {link.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        to={child.href}
-                        onClick={handleNavClick}
-                        className={`block py-2.5 text-sm transition-colors ${
-                          location.pathname === child.href
-                            ? "text-primary font-medium"
-                            : "text-muted-foreground hover:text-foreground"
-                        }`}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
+                </Link>
+                {link.children && (
+                  <ul className="border-b border-border py-1 pl-4">
+                    {link.children
+                      .filter((child) => child.href !== link.href)
+                      .map((child) => (
+                        <li key={child.href}>
+                          <Link to={child.href} className="block py-2.5 text-muted-foreground">
+                            {child.label}
+                          </Link>
+                        </li>
+                      ))}
+                  </ul>
                 )}
-              </div>
-            ) : (
-              <Link
-                key={link.label}
-                to={link.href}
-                onClick={link.href === "/" ? handleHomeClick : handleNavClick}
-                className="block py-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </Link>
-            )
-          )}
-
-          <Link
-            to="/contact"
-            onClick={handleNavClick}
-            className="block py-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Contact
-          </Link>
-          <Link
-            to="/aanmelden"
-            onClick={handleNavClick}
-            className="block mt-2 text-center px-5 py-2.5 text-sm font-semibold bg-primary text-primary-foreground rounded-lg"
-          >
-            Aanmelden
-          </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </nav>

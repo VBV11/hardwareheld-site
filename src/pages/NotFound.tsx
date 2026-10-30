@@ -1,5 +1,7 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const NotFound = () => {
   const location = useLocation();
@@ -9,14 +11,20 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-muted">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-muted-foreground">Deze pagina bestaat niet.</p>
-        <a href="/" className="text-primary underline hover:text-primary/90">
-          Terug naar home
-        </a>
-      </div>
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
+      <main className="flex flex-1 items-center bg-muted pb-16 pt-32">
+        <div className="container">
+          <h1 className="kop-pagina">Deze pagina bestaat niet</h1>
+          <p className="inleiding mt-4 max-w-2xl text-foreground/80">
+            De link klopt niet meer of de pagina is verplaatst.
+          </p>
+          <Link to="/" className="knop knop-oranje mt-7">
+            Terug naar home
+          </Link>
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 };

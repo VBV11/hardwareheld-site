@@ -36,7 +36,7 @@ const routes = [
   {
     path: "contact",
     title: "Contact: ophaling of datawissing aanvragen | Hardware Held",
-    description: "Vraag een gratis ophaling of datawissing op locatie aan in Zuid- en Midden-Limburg. Reactie binnen 1 werkdag via e-mail of WhatsApp.",
+    description: "Vraag een gratis ophaling of datawissing op locatie aan in Zuid- en Midden-Limburg. Reactie binnen 1 werkdag per e-mail.",
   },
   {
     path: "privacy",

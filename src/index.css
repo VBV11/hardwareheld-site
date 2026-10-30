@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,44 +6,50 @@
 
 @layer base {
   :root {
+    /* Kleuren uit het logo: oranje "HELD" en grafiet "HARDWARE" */
     --background: 0 0% 100%;
-    --foreground: 0 0% 8%;
+    --foreground: 225 6% 13%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 225 6% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover-foreground: 225 6% 13%;
 
-    --primary: 25 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 30 94% 55%;
+    --primary-foreground: 225 6% 13%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 8%;
+    --secondary: 180 6% 93%;
+    --secondary-foreground: 225 6% 13%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 180 6% 93%;
+    --muted-foreground: 210 6% 36%;
 
-    --accent: 25 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 180 6% 93%;
+    --accent-foreground: 225 6% 13%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 72% 42%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 25 100% 50%;
+    --border: 200 5% 82%;
+    --input: 200 4% 58%;
+    --ring: 225 6% 13%;
 
-    --radius: 0.75rem;
+    /* Oranje dat leesbaar is als tekst op wit en lichtgrijs */
+    --inkt: 26 100% 31%;
+    /* Statuslampje op de wisbevestiging */
+    --led: 153 70% 27%;
+
+    --radius: 0.25rem;
 
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 8%;
-    --sidebar-primary: 25 100% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 8%;
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 25 100% 50%;
+    --sidebar-foreground: 225 6% 13%;
+    --sidebar-primary: 30 94% 55%;
+    --sidebar-primary-foreground: 225 6% 13%;
+    --sidebar-accent: 180 6% 93%;
+    --sidebar-accent-foreground: 225 6% 13%;
+    --sidebar-border: 200 5% 82%;
+    --sidebar-ring: 225 6% 13%;
   }
 }
 
@@ -52,56 +58,134 @@
     @apply border-border;
   }
 
+  html {
+    scroll-padding-top: 6rem;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
+    @apply font-heading;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Typografische schaal */
+  .kop-hero {
+    font-size: clamp(2.5rem, 9vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+  }
+
+  @media (min-width: 1024px) {
+    .kop-hero {
+      font-size: min(6.4vw, 5.25rem);
+    }
+
+    .kop-hero span {
+      white-space: nowrap;
+    }
+  }
+
+  .kop-pagina {
+    font-size: clamp(2.125rem, 4.6vw, 3.625rem);
+    line-height: 1.06;
+    letter-spacing: -0.022em;
+  }
+
+  .kop-sectie {
+    font-size: clamp(1.75rem, 3.1vw, 2.625rem);
+    line-height: 1.1;
+  }
+
+  .kop-blok {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .inleiding {
+    font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+    line-height: 1.55;
+  }
+
+  /* Knoppen en links: één actie, overal dezelfde vorm */
+  .knop {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded px-6 py-3 text-center font-semibold leading-tight transition-colors duration-150;
+  }
+
+  .knop-oranje {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .knop-oranje:hover {
+    background-color: hsl(30 94% 49%);
+  }
+
+  .knop-donker {
+    @apply bg-foreground text-white;
+  }
+
+  .knop-donker:hover {
+    background-color: hsl(225 6% 26%);
+  }
+
+  .tekstlink {
+    @apply font-semibold underline decoration-primary decoration-2 underline-offset-4 transition-colors duration-150;
+  }
+
+  .tekstlink:hover {
+    @apply decoration-current;
+  }
+
+  /* Vlakken die tot aan de rand van het scherm doorlopen, buiten .container om */
+  @media (min-width: 1024px) {
+    .uitloop-rechts {
+      margin-right: calc(-1 * (max(0px, (100vw - 1280px) / 2) + 2rem));
+    }
+
+    .uitloop-links {
+      margin-left: calc(-1 * (max(0px, (100vw - 1280px) / 2) + 2rem));
+      padding-left: calc(max(0px, (100vw - 1280px) / 2) + 2rem);
+    }
   }
 }
 
 @layer utilities {
-  .text-gradient-orange {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(25 100% 50%), hsl(35 100% 55%));
+  .font-heading {
+    font-stretch: 118%;
   }
 
-  .hover-lift {
-    @apply transition-all duration-200;
-  }
-  .hover-lift:hover {
-    @apply -translate-y-1;
-    box-shadow: 0 12px 36px -12px hsl(25 100% 50% / 0.22);
-  }
-
-  .btn-hover {
-    @apply transition-all duration-200;
-  }
-  .btn-hover:hover {
-    @apply scale-[1.03];
-    filter: brightness(0.93);
-  }
-
-  .icon-pulse {
-    animation: icon-glow 2.5s ease-in-out infinite;
-  }
-
-  @keyframes icon-glow {
-    0%, 100% {
-      box-shadow: 0 0 0 0 hsl(25 100% 50% / 0.15);
-    }
-    50% {
-      box-shadow: 0 0 20px 6px hsl(25 100% 50% / 0.22);
-    }
-  }
-
-  /* Fade-in animation used by Navbar */
+  /* Dropdown in de navigatie */
   @keyframes fade-in {
     from { opacity: 0; transform: translateY(-4px); }
     to   { opacity: 1; transform: translateY(0); }
   }
   .animate-fade-in {
-    animation: fade-in 0.18s ease-out both;
+    animation: fade-in 0.15s ease-out both;
   }
 }

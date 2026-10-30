@@ -102,12 +102,10 @@ export default function AanmeldFormulier() {
         animate={{ opacity: 1, scale: 1 }}
         className="flex flex-col items-center gap-4 py-14 text-center"
       >
-        <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-          <CheckCircle2 size={36} className="text-primary" />
-        </div>
-        <h3 className="font-heading text-xl font-bold">Bedankt!</h3>
+        <CheckCircle2 size={44} className="text-led" aria-hidden />
+        <h3 className="kop-blok">Bedankt!</h3>
         <p className="text-muted-foreground max-w-sm">
-          We hebben je aanvraag ontvangen en nemen binnen 1 werkdag contact op.
+          Wij hebben uw aanvraag ontvangen en nemen binnen 1 werkdag contact op.
         </p>
         <Button variant="outline" size="sm" onClick={() => setStatus("idle")} className="mt-2">
           Nog een aanvraag indienen
@@ -120,16 +118,20 @@ export default function AanmeldFormulier() {
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
       {/* Bedrijfsnaam + Contactpersoon */}
       <div className="grid sm:grid-cols-2 gap-4">
-        <Field label="Bedrijfsnaam" required error={errors.bedrijfsnaam}>
+        <Field label="Bedrijfsnaam" htmlFor="bedrijfsnaam" required error={errors.bedrijfsnaam}>
           <Input
+            id="bedrijfsnaam"
+            autoComplete="organization"
             placeholder="Uw bedrijfsnaam"
             value={form.bedrijfsnaam}
             onChange={(e) => set("bedrijfsnaam", e.target.value)}
             className={errors.bedrijfsnaam ? "border-destructive" : ""}
           />
         </Field>
-        <Field label="Contactpersoon" required error={errors.contactpersoon}>
+        <Field label="Contactpersoon" htmlFor="contactpersoon" required error={errors.contactpersoon}>
           <Input
+            id="contactpersoon"
+            autoComplete="name"
             placeholder="Voor- en achternaam"
             value={form.contactpersoon}
             onChange={(e) => set("contactpersoon", e.target.value)}
@@ -140,19 +142,23 @@ export default function AanmeldFormulier() {
 
       {/* Email + Telefoon */}
       <div className="grid sm:grid-cols-2 gap-4">
-        <Field label="E-mailadres" required error={errors.email}>
+        <Field label="E-mailadres" htmlFor="email" required error={errors.email}>
           <Input
+            id="email"
             type="email"
+            autoComplete="email"
             placeholder="uw@bedrijf.nl"
             value={form.email}
             onChange={(e) => set("email", e.target.value)}
             className={errors.email ? "border-destructive" : ""}
           />
         </Field>
-        <Field label="Telefoonnummer">
+        <Field label="Uw telefoonnummer" htmlFor="telefoon">
           <Input
+            id="telefoon"
             type="tel"
-            placeholder="06 12 34 56 78"
+            autoComplete="tel"
+            placeholder="Optioneel"
             value={form.telefoon}
             onChange={(e) => set("telefoon", e.target.value)}
           />
@@ -161,18 +167,20 @@ export default function AanmeldFormulier() {
 
       {/* Ophaaladres + Aantal */}
       <div className="grid sm:grid-cols-2 gap-4">
-        <Field label="Ophaaladres (postcode + plaats)" required error={errors.ophaaladres}>
+        <Field label="Ophaaladres (postcode en plaats)" htmlFor="ophaaladres" required error={errors.ophaaladres}>
           <Input
+            id="ophaaladres"
+            autoComplete="street-address"
             placeholder="1234 AB Sittard"
             value={form.ophaaladres}
             onChange={(e) => set("ophaaladres", e.target.value)}
             className={errors.ophaaladres ? "border-destructive" : ""}
           />
         </Field>
-        <Field label="Hoeveel apparaten ongeveer?" required error={errors.aantalApparaten}>
+        <Field label="Hoeveel apparaten ongeveer?" htmlFor="aantal" required error={errors.aantalApparaten}>
           <Select value={form.aantalApparaten} onValueChange={(v) => set("aantalApparaten", v)}>
-            <SelectTrigger className={errors.aantalApparaten ? "border-destructive" : ""}>
-              <SelectValue placeholder="Kies een range" />
+            <SelectTrigger id="aantal" className={errors.aantalApparaten ? "border-destructive" : ""}>
+              <SelectValue placeholder="Kies een aantal" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="1–5">1 – 5</SelectItem>
@@ -185,8 +193,9 @@ export default function AanmeldFormulier() {
       </div>
 
       {/* Omschrijving */}
-      <Field label="Omschrijving apparatuur of je vraag" required error={errors.omschrijving}>
+      <Field label="Omschrijving apparatuur of uw vraag" htmlFor="omschrijving" required error={errors.omschrijving}>
         <Textarea
+          id="omschrijving"
           rows={4}
           placeholder="Voorbeeld: 10 computers, 5 laptops, 3 servers, circa 10 monitoren, 1 printer en 2 verhuisdozen met diversen"
           value={form.omschrijving}
@@ -196,7 +205,7 @@ export default function AanmeldFormulier() {
       </Field>
 
       {/* Wisbevestiging */}
-      <Field label="Wil je een wisbevestiging per apparaat ontvangen?" required error={errors.wiscertificaat}>
+      <Field label="Wilt u een wisbevestiging per apparaat ontvangen?" required error={errors.wiscertificaat}>
         <RadioGroup
           value={form.wiscertificaat}
           onValueChange={(v) => set("wiscertificaat", v)}
@@ -207,7 +216,7 @@ export default function AanmeldFormulier() {
             "Nee, geen belangrijke data aanwezig",
           ].map((opt) => (
             <label key={opt} className="flex items-center gap-2.5 cursor-pointer">
-              <RadioGroupItem value={opt} />
+              <RadioGroupItem value={opt} className="border-foreground text-foreground" />
               <span className="text-sm">{opt}</span>
             </label>
           ))}
@@ -220,11 +229,11 @@ export default function AanmeldFormulier() {
           <Checkbox
             checked={form.akkoord}
             onCheckedChange={(v) => set("akkoord", !!v)}
-            className={`mt-0.5 ${errors.akkoord ? "border-destructive" : ""}`}
+            className={`mt-0.5 border-foreground data-[state=checked]:bg-foreground data-[state=checked]:text-white ${errors.akkoord ? "border-destructive" : ""}`}
           />
           <span className="text-sm leading-snug">
             Ik ga akkoord met het{" "}
-            <Link to="/privacy" target="_blank" className="text-primary underline underline-offset-2 hover:opacity-75">
+            <Link to="/privacy" target="_blank" className="tekstlink">
               privacybeleid
             </Link>
             .<span className="text-destructive ml-0.5">*</span>
@@ -237,10 +246,12 @@ export default function AanmeldFormulier() {
 
       {/* Error */}
       {status === "error" && (
-        <div className="flex items-center gap-2 p-3 rounded-xl bg-destructive/10 border border-destructive/20 text-sm text-destructive">
-          <AlertCircle size={16} />
-          Er is iets misgegaan. Probeer het opnieuw of mail{" "}
-          <a href="mailto:info@hardwareheld.nl" className="underline">info@hardwareheld.nl</a>.
+        <div role="alert" className="flex items-start gap-2 rounded border border-destructive/30 bg-destructive/10 p-3 text-sm text-destructive">
+          <AlertCircle size={16} className="mt-0.5 flex-shrink-0" aria-hidden />
+          <span>
+            Uw aanvraag is niet verstuurd. Probeer het opnieuw of mail naar{" "}
+            <a href="mailto:info@hardwareheld.nl" className="underline">info@hardwareheld.nl</a>.
+          </span>
         </div>
       )}
 
@@ -249,12 +260,12 @@ export default function AanmeldFormulier() {
         <Button
           type="submit"
           disabled={status === "sending"}
-          className="w-full h-12 text-base font-semibold gap-2"
+          className="h-12 w-full gap-2 text-base font-semibold"
         >
-          {status === "sending" ? "Versturen…" : <><Send size={18} /> Gratis ophalen aanvragen</>}
+          {status === "sending" ? "Versturen…" : <><Send size={18} aria-hidden /> Gratis ophalen aanvragen</>}
         </Button>
-        <p className="text-xs text-muted-foreground text-center mt-2">
-          We reageren binnen 1 werkdag. Velden met <span className="text-destructive">*</span> zijn verplicht.
+        <p className="mt-2 text-sm text-muted-foreground">
+          Velden met <span className="text-destructive">*</span> zijn verplicht.
         </p>
       </div>
     </form>
@@ -263,25 +274,27 @@ export default function AanmeldFormulier() {
 
 function Field({
   label,
+  htmlFor,
   required,
   error,
   children,
 }: {
   label: string;
+  htmlFor?: string;
   required?: boolean;
   error?: string;
   children: React.ReactNode;
 }) {
   return (
     <div className="space-y-1.5">
-      <Label className="text-sm font-medium">
+      <Label htmlFor={htmlFor} className="text-[0.9375rem] font-medium">
         {label}
         {required && <span className="text-destructive ml-0.5">*</span>}
       </Label>
       {children}
       {error && (
-        <p className="text-xs text-destructive flex items-center gap-1">
-          <AlertCircle size={12} /> {error}
+        <p className="flex items-center gap-1 text-sm text-destructive">
+          <AlertCircle size={13} aria-hidden /> {error}
         </p>
       )}
     </div>
