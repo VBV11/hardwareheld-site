@@ -37,26 +37,21 @@ const DienstenSection = () => (
     titel="Wilt u de hardware kwijt, of houden?"
     intro="Daar hangt onze dienst vanaf. In beide gevallen is uw data weg en heeft u het bewijs."
   >
-    <div className="grid border-t-2 border-foreground md:grid-cols-2">
-      {diensten.map((dienst, i) => (
-        <div
-          key={dienst.titel}
-          className={`flex flex-col border-foreground py-6 md:py-7 ${
-            i === 0 ? "border-b-2 md:border-b-0 md:border-r-2 md:pr-8" : "md:pl-8"
-          }`}
-        >
-          <p className="font-medium text-inkt">{dienst.keuze}</p>
-          <h3 className="mt-1 font-heading text-2xl font-extrabold leading-tight">{dienst.titel}</h3>
-          <p className="mt-3 text-muted-foreground">{dienst.tekst}</p>
-          <dl className="mt-5 flex-1 space-y-3">
+    <div className="grid gap-5 md:grid-cols-2">
+      {diensten.map((dienst) => (
+        <div key={dienst.titel} className="flex flex-col rounded-xl border border-border bg-card p-6 md:p-7">
+          <p className="text-sm font-medium text-inkt">{dienst.keuze}</p>
+          <h3 className="mt-1 text-xl font-semibold leading-snug">{dienst.titel}</h3>
+          <p className="mt-2 text-muted-foreground">{dienst.tekst}</p>
+          <dl className="mt-5 flex-1 divide-y divide-border border-t border-border">
             {dienst.gegevens.map((g) => (
-              <div key={g.label}>
+              <div key={g.label} className="py-2.5">
                 <dt className="text-sm text-muted-foreground">{g.label}</dt>
-                <dd className="font-medium leading-snug">{g.waarde}</dd>
+                <dd className="leading-snug">{g.waarde}</dd>
               </div>
             ))}
           </dl>
-          <Link to={dienst.href} className="tekstlink mt-6 self-start">
+          <Link to={dienst.href} className="tekstlink mt-4 self-start">
             {dienst.link}
           </Link>
         </div>

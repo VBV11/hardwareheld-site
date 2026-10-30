@@ -20,18 +20,20 @@ const ProductsSection = () => (
       </Link>
     }
   >
-    <ul className="grid gap-x-10 border-t-2 border-foreground sm:grid-cols-2">
+    <ul className="grid gap-x-10 gap-y-8 sm:grid-cols-2">
       {categorieen.map((c) => (
-        <li key={c.titel} className="border-b border-border py-5">
-          <c.icon size={26} strokeWidth={1.75} aria-hidden />
+        <li key={c.titel}>
+          <span className="tegel">
+            <c.icon size={20} strokeWidth={1.75} aria-hidden />
+          </span>
           <h3 className="kop-blok mt-3">{c.titel}</h3>
           <p className="mt-1 text-muted-foreground">{c.tekst}</p>
         </li>
       ))}
     </ul>
-    <p className="mt-6 max-w-prose">
-      <span className="font-semibold">Twijfelt u?</span> Stuur een foto naar{" "}
-      <a href="mailto:info@hardwareheld.nl" className="tekstlink">
+    <p className="mt-8 max-w-prose text-muted-foreground">
+      Twijfelt u? Stuur een foto naar{" "}
+      <a href="mailto:info@hardwareheld.nl" className="tekstlink text-foreground">
         info@hardwareheld.nl
       </a>
       . Wij laten u weten of het past.

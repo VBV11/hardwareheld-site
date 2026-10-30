@@ -4,21 +4,24 @@ interface Stap {
 }
 
 const Stappen = ({ stappen }: { stappen: Stap[] }) => (
-  <ol className="border-t-2 border-foreground">
+  <ol>
     {stappen.map((stap, i) => (
       <li
         key={stap.titel}
-        className="grid grid-cols-[2.75rem_minmax(0,1fr)] gap-x-4 border-b border-border py-6 md:grid-cols-[3.25rem_minmax(0,1fr)] md:gap-x-6 md:py-7"
+        className="relative grid grid-cols-[2.25rem_minmax(0,1fr)] gap-x-5 pb-8 last:pb-0"
       >
+        {i < stappen.length - 1 && (
+          <span className="absolute bottom-0 left-[1.125rem] top-10 w-px bg-border" aria-hidden />
+        )}
         <span
-          className="flex h-11 w-11 items-center justify-center rounded bg-primary font-heading text-xl font-extrabold text-primary-foreground md:h-[3.25rem] md:w-[3.25rem] md:text-2xl"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/15 text-[0.9375rem] font-semibold text-inkt"
           aria-hidden
         >
           {i + 1}
         </span>
-        <div>
+        <div className="pt-1">
           <h3 className="kop-blok">{stap.titel}</h3>
-          <p className="mt-1.5 max-w-prose text-muted-foreground">{stap.tekst}</p>
+          <p className="mt-1 max-w-prose text-muted-foreground">{stap.tekst}</p>
         </div>
       </li>
     ))}

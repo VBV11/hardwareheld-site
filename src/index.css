@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,50 +6,50 @@
 
 @layer base {
   :root {
-    /* Kleuren uit het logo: oranje "HELD" en grafiet "HARDWARE" */
+    /* Rustig basispalet; het oranje uit het logo is alleen een accent */
     --background: 0 0% 100%;
-    --foreground: 225 6% 13%;
+    --foreground: 220 11% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 225 6% 13%;
+    --card-foreground: 220 11% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 225 6% 13%;
+    --popover-foreground: 220 11% 11%;
 
     --primary: 30 94% 55%;
-    --primary-foreground: 225 6% 13%;
+    --primary-foreground: 220 11% 11%;
 
-    --secondary: 180 6% 93%;
-    --secondary-foreground: 225 6% 13%;
+    --secondary: 60 9% 96%;
+    --secondary-foreground: 220 11% 11%;
 
-    --muted: 180 6% 93%;
-    --muted-foreground: 210 6% 36%;
+    --muted: 60 9% 96%;
+    --muted-foreground: 218 6% 39%;
 
-    --accent: 180 6% 93%;
-    --accent-foreground: 225 6% 13%;
+    --accent: 60 9% 96%;
+    --accent-foreground: 220 11% 11%;
 
     --destructive: 0 72% 42%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 200 5% 82%;
-    --input: 200 4% 58%;
-    --ring: 225 6% 13%;
+    --border: 60 5% 89%;
+    --input: 220 5% 72%;
+    --ring: 220 11% 11%;
 
-    /* Oranje dat leesbaar is als tekst op wit en lichtgrijs */
-    --inkt: 26 100% 31%;
-    /* Statuslampje op de wisbevestiging */
-    --led: 153 70% 27%;
+    /* Oranje dat leesbaar is als kleine tekst en pictogram */
+    --inkt: 26 88% 34%;
+    /* Status "gewist" op de wisbevestiging */
+    --led: 153 60% 29%;
 
-    --radius: 0.25rem;
+    --radius: 0.625rem;
 
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 225 6% 13%;
+    --sidebar-foreground: 220 11% 11%;
     --sidebar-primary: 30 94% 55%;
-    --sidebar-primary-foreground: 225 6% 13%;
-    --sidebar-accent: 180 6% 93%;
-    --sidebar-accent-foreground: 225 6% 13%;
-    --sidebar-border: 200 5% 82%;
-    --sidebar-ring: 225 6% 13%;
+    --sidebar-primary-foreground: 220 11% 11%;
+    --sidebar-accent: 60 9% 96%;
+    --sidebar-accent-foreground: 220 11% 11%;
+    --sidebar-border: 60 5% 89%;
+    --sidebar-ring: 220 11% 11%;
   }
 }
 
@@ -70,8 +70,9 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
-    font-weight: 800;
-    letter-spacing: -0.015em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    word-spacing: 0.04em;
     text-wrap: balance;
   }
 
@@ -96,46 +97,37 @@
 @layer components {
   /* Typografische schaal */
   .kop-hero {
-    font-size: clamp(2.5rem, 9vw, 4.5rem);
-    line-height: 1.02;
-    letter-spacing: -0.025em;
-  }
-
-  @media (min-width: 1024px) {
-    .kop-hero {
-      font-size: min(6.4vw, 5.25rem);
-    }
-
-    .kop-hero span {
-      white-space: nowrap;
-    }
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
   }
 
   .kop-pagina {
-    font-size: clamp(2.125rem, 4.6vw, 3.625rem);
-    line-height: 1.06;
-    letter-spacing: -0.022em;
+    font-size: clamp(2.125rem, 3.8vw, 3.125rem);
+    line-height: 1.12;
+    letter-spacing: -0.028em;
   }
 
   .kop-sectie {
-    font-size: clamp(1.75rem, 3.1vw, 2.625rem);
-    line-height: 1.1;
+    font-size: clamp(1.625rem, 2.4vw, 2.125rem);
+    line-height: 1.2;
+    letter-spacing: -0.024em;
   }
 
   .kop-blok {
-    font-size: 1.25rem;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
+    font-size: 1.125rem;
+    line-height: 1.35;
+    letter-spacing: -0.012em;
   }
 
   .inleiding {
-    font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
-    line-height: 1.55;
+    font-size: clamp(1.0625rem, 1.3vw, 1.1875rem);
+    line-height: 1.6;
   }
 
-  /* Knoppen en links: één actie, overal dezelfde vorm */
+  /* Knoppen en links */
   .knop {
-    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded px-6 py-3 text-center font-semibold leading-tight transition-colors duration-150;
+    @apply inline-flex min-h-[46px] items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-center text-[0.9375rem] font-semibold leading-tight transition-colors duration-150;
   }
 
   .knop-oranje {
@@ -143,43 +135,32 @@
   }
 
   .knop-oranje:hover {
-    background-color: hsl(30 94% 49%);
+    background-color: hsl(30 94% 50%);
   }
 
-  .knop-donker {
-    @apply bg-foreground text-white;
+  .knop-rustig {
+    @apply border border-border bg-background text-foreground;
   }
 
-  .knop-donker:hover {
-    background-color: hsl(225 6% 26%);
+  .knop-rustig:hover {
+    @apply bg-muted;
   }
 
   .tekstlink {
-    @apply font-semibold underline decoration-primary decoration-2 underline-offset-4 transition-colors duration-150;
+    @apply font-medium underline decoration-foreground/30 underline-offset-4 transition-colors duration-150;
   }
 
   .tekstlink:hover {
     @apply decoration-current;
   }
 
-  /* Vlakken die tot aan de rand van het scherm doorlopen, buiten .container om */
-  @media (min-width: 1024px) {
-    .uitloop-rechts {
-      margin-right: calc(-1 * (max(0px, (100vw - 1280px) / 2) + 2rem));
-    }
-
-    .uitloop-links {
-      margin-left: calc(-1 * (max(0px, (100vw - 1280px) / 2) + 2rem));
-      padding-left: calc(max(0px, (100vw - 1280px) / 2) + 2rem);
-    }
+  /* Pictogram in een zacht vlakje */
+  .tegel {
+    @apply flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/15 text-inkt;
   }
 }
 
 @layer utilities {
-  .font-heading {
-    font-stretch: 118%;
-  }
-
   /* Dropdown in de navigatie */
   @keyframes fade-in {
     from { opacity: 0; transform: translateY(-4px); }

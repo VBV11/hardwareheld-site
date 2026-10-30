@@ -137,17 +137,17 @@ const WatWijAannemen = () => {
 
         <section className="py-10 md:py-16">
           <div className="container">
-            {categories.map((cat, i) => (
+            {categories.map((cat) => (
               <article
                 key={cat.id}
                 id={cat.id}
-                className={`grid gap-x-10 gap-y-4 border-t-2 border-foreground py-8 md:py-10 lg:grid-cols-12 ${
-                  i === categories.length - 1 ? "border-b-2" : ""
+                className={`grid gap-x-10 gap-y-4 border-t border-border py-10 first:border-t-0 first:pt-0 lg:grid-cols-12 ${
+                  ""
                 }`}
               >
                 <div className="min-w-0 lg:col-span-4">
-                  <cat.icon size={30} strokeWidth={1.75} aria-hidden />
-                  <h2 className="mt-3 break-words font-heading text-2xl font-extrabold leading-tight xl:text-[1.75rem]">
+                  <span className="tegel"><cat.icon size={20} strokeWidth={1.75} aria-hidden /></span>
+                  <h2 className="mt-3 break-words text-2xl font-semibold leading-tight">
                     {cat.title}
                   </h2>
                 </div>
@@ -173,9 +173,9 @@ const WatWijAannemen = () => {
           titel="Wat nemen wij niet aan"
           intro="Niet alle apparatuur past binnen onze werkwijze. Voor onderstaande zaken kunt u beter terecht bij een gespecialiseerde verwerker."
         >
-          <ul className="grid gap-x-10 border-t-2 border-foreground sm:grid-cols-2">
+          <ul className="grid gap-x-10 sm:grid-cols-2">
             {nietAan.map((item) => (
-              <li key={item.title} className="border-b border-border/80 py-5">
+              <li key={item.title} className="py-3.5">
                 <h3 className="kop-blok">{item.title}</h3>
                 <p className="mt-1.5 text-muted-foreground">{item.text}</p>
               </li>
@@ -184,13 +184,13 @@ const WatWijAannemen = () => {
         </Sectie>
 
         <Sectie titel="Twijfelt u of uw apparatuur in aanmerking komt?">
-          <div className="border-t-2 border-foreground pt-5">
+          <div>
             <p className="max-w-prose">
               Stuur een foto per e-mail en u krijgt binnen 1 werkdag antwoord. Wij denken graag mee. Heeft u een grote
               partij hardware die u in één keer wilt afvoeren? Laat het weten, dan plannen wij een ophaalmoment in dat
               past.
             </p>
-            <a href="mailto:info@hardwareheld.nl" className="knop knop-donker mt-6">
+            <a href="mailto:info@hardwareheld.nl" className="knop knop-rustig mt-6">
               <Mail size={18} aria-hidden /> Stuur een foto per e-mail
             </a>
           </div>

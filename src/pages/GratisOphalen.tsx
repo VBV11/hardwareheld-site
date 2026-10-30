@@ -73,10 +73,10 @@ const GratisOphalen = () => {
             Bekijk de volledige lijst
           </Link>
         }>
-          <ul className="grid gap-x-10 border-t-2 border-foreground sm:grid-cols-2">
+          <ul className="grid gap-x-10 sm:grid-cols-2">
             {apparaten.map((a) => (
-              <li key={a.titel} className="grid grid-cols-[1.75rem_minmax(0,1fr)] gap-x-4 border-b border-border/80 py-5">
-                <a.icon size={24} strokeWidth={1.75} className="mt-0.5" aria-hidden />
+              <li key={a.titel} className="grid grid-cols-[2.5rem_minmax(0,1fr)] gap-x-4 py-3.5">
+                <span className="tegel"><a.icon size={20} strokeWidth={1.75} aria-hidden /></span>
                 <div>
                   <h3 className="kop-blok">{a.titel}</h3>
                   <p className="mt-1 text-muted-foreground">{a.tekst}</p>
@@ -90,8 +90,8 @@ const GratisOphalen = () => {
           <Voordelen items={benefits} />
         </Sectie>
 
-        <section className="bg-foreground py-14 text-white md:py-24">
-          <div className="container grid items-center gap-x-16 gap-y-8 lg:grid-cols-12">
+        <section className="container py-16 md:py-24">
+          <div className="grid items-center gap-x-16 gap-y-8 rounded-2xl bg-foreground p-7 text-white md:p-12 lg:grid-cols-12">
             <div className="lg:col-span-8">
               <h2 className="kop-sectie">Hoe zit het met datawissing?</h2>
               <p className="mt-4 max-w-prose text-white/80">
@@ -101,7 +101,7 @@ const GratisOphalen = () => {
               </p>
               <p className="mt-4 max-w-prose text-white/80">
                 Wilt u de hardware liever houden en alleen de data laten wissen? Bekijk dan onze{" "}
-                <Link to="/werkwijze/datawissing-op-locatie" className="tekstlink text-white">
+                <Link to="/werkwijze/datawissing-op-locatie" className="tekstlink text-white decoration-white/40">
                   datawissing op locatie
                 </Link>
                 .

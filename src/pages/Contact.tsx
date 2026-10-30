@@ -4,7 +4,7 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SEO from "@/components/SEO";
 import PageHero from "@/components/PageHero";
 import Sectie from "@/components/Sectie";
-import { Mail, MapPin, ArrowRight } from "lucide-react";
+import { Mail, MapPin, ClipboardList } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
@@ -29,59 +29,49 @@ const Contact = () => {
           intro="Beide komen bij dezelfde contactpersoon terecht."
           actie={
             <p className="flex items-center gap-2 text-muted-foreground">
-              <MapPin size={18} aria-hidden />
+              <MapPin size={17} aria-hidden />
               Sittard-Geleen, Limburg
             </p>
           }
         >
-          <div className="grid gap-4 md:grid-cols-2">
-            <Link
-              to="/aanmelden"
-              className="group flex flex-col rounded-sm bg-primary p-6 text-primary-foreground transition-colors hover:bg-[hsl(30_94%_49%)] md:p-7"
-            >
-              <span className="text-[0.9375rem]">Snelste manier</span>
-              <span className="mt-1 font-heading text-2xl font-extrabold leading-tight">
-                Vul het aanmeldformulier in
+          <div className="grid gap-5 md:grid-cols-2">
+            <div className="flex min-w-0 flex-col rounded-xl border border-border p-6 md:p-7">
+              <span className="tegel">
+                <ClipboardList size={20} strokeWidth={1.75} aria-hidden />
               </span>
-              <span className="mt-3 flex-1">
-                Met een paar vragen weten wij wat u heeft en waar wij moeten zijn.
-              </span>
-              <span className="mt-5 inline-flex items-center gap-1.5 font-semibold">
+              <h3 className="mt-4 text-xl font-semibold leading-snug">Aanmeldformulier</h3>
+              <p className="mt-2 flex-1 text-muted-foreground">
+                De snelste manier. Met een paar vragen weten wij wat u heeft en waar wij moeten zijn.
+              </p>
+              <Link to="/aanmelden" className="knop knop-oranje mt-5 self-start">
                 Naar het formulier
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-0.5" aria-hidden />
-              </span>
-            </Link>
+              </Link>
+            </div>
 
-            <a
-              href="mailto:info@hardwareheld.nl"
-              className="group flex min-w-0 flex-col rounded-sm border-2 border-foreground p-6 transition-colors hover:bg-muted md:p-7"
-            >
-              <span className="text-[0.9375rem] text-muted-foreground">Liever zelf schrijven</span>
-              <span className="mt-1 break-words font-heading text-xl font-extrabold leading-tight sm:text-2xl md:text-xl xl:text-2xl">
-                info@hardwareheld.nl
+            <div className="flex min-w-0 flex-col rounded-xl border border-border p-6 md:p-7">
+              <span className="tegel">
+                <Mail size={20} strokeWidth={1.75} aria-hidden />
               </span>
-              <span className="mt-3 flex-1 text-muted-foreground">
+              <h3 className="mt-4 break-words text-xl font-semibold leading-snug">info@hardwareheld.nl</h3>
+              <p className="mt-2 flex-1 text-muted-foreground">
                 Ook handig als u foto's van uw apparatuur wilt meesturen.
-              </span>
-              <span className="mt-5 inline-flex items-center gap-1.5 font-semibold">
-                <Mail size={18} aria-hidden />
+              </p>
+              <a href="mailto:info@hardwareheld.nl" className="knop knop-rustig mt-5 self-start">
                 Stuur een e-mail
-              </span>
-            </a>
+              </a>
+            </div>
           </div>
         </Sectie>
 
         <Sectie toon="grijs" titel="Wat vermelden?">
-          <div className="border-t-2 border-foreground pt-5">
-            <p className="max-w-prose">
-              Vermeld kort hoeveel apparaten het betreft, welke soort (computers, laptops, monitoren, netwerkapparatuur),
-              uw bedrijfsnaam en locatie. Meer details mogen, maar hoeven niet.
-            </p>
-            <p className="mt-4 max-w-prose text-muted-foreground">
-              Daarna reageren wij binnen 1 werkdag met een voorstel voor gratis ophalen of datawissing op locatie, en
-              plannen wij samen een moment dat u uitkomt.
-            </p>
-          </div>
+          <p className="max-w-prose">
+            Vermeld kort hoeveel apparaten het betreft, welke soort (computers, laptops, monitoren, netwerkapparatuur),
+            uw bedrijfsnaam en locatie. Meer details mogen, maar hoeven niet.
+          </p>
+          <p className="mt-4 max-w-prose text-muted-foreground">
+            Daarna reageren wij binnen 1 werkdag met een voorstel voor gratis ophalen of datawissing op locatie, en
+            plannen wij samen een moment dat u uitkomt.
+          </p>
         </Sectie>
       </main>
       <Footer />

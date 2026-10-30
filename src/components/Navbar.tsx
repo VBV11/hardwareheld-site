@@ -59,11 +59,11 @@ const Navbar = () => {
 
   const linkKlasse = (href: string) =>
     `rounded px-3 py-2 text-[0.9375rem] font-medium transition-colors ${
-      isActive(href) ? "text-foreground underline decoration-primary decoration-2 underline-offset-8" : "text-foreground/75 hover:text-foreground"
+      isActive(href) ? "text-foreground" : "text-muted-foreground hover:text-foreground"
     }`;
 
   return (
-    <nav aria-label="Hoofdmenu" className="fixed left-0 right-0 top-0 z-50 border-b-2 border-foreground bg-background">
+    <nav aria-label="Hoofdmenu" className="fixed left-0 right-0 top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <div className="container flex h-[4.25rem] items-center justify-between gap-4">
         <Link to="/" className="flex-shrink-0" onClick={handleHomeClick}>
           <img src={logo} alt="Hardware Held" width={153} height={40} className="h-9 w-auto md:h-10" />
@@ -95,7 +95,7 @@ const Navbar = () => {
                 </Link>
                 {werkwijzeOpen && (
                   <div className="absolute left-0 top-full w-64 pt-3">
-                    <div className="animate-fade-in overflow-hidden rounded border-2 border-foreground bg-background">
+                    <div className="animate-fade-in overflow-hidden rounded-xl border border-border bg-background shadow-lg">
                       {link.children.map((child) => (
                         <Link
                           key={child.href}
@@ -120,13 +120,13 @@ const Navbar = () => {
             )
           )}
 
-          <Link to="/aanmelden" className="knop knop-oranje ml-3 min-h-[44px] px-5 text-[0.9375rem]">
+          <Link to="/aanmelden" className="knop knop-oranje ml-3 min-h-[42px]">
             Ophalen aanvragen
           </Link>
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
-          <Link to="/aanmelden" className="knop knop-oranje min-h-[44px] px-4 text-sm">
+          <Link to="/aanmelden" className="knop knop-oranje min-h-[42px] px-4 text-sm">
             Aanvragen
           </Link>
           <button

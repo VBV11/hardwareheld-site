@@ -54,7 +54,7 @@ const OverOns = () => {
         />
 
         <Sectie titel="Ons verhaal">
-          <div className="grid gap-x-10 gap-y-6 border-t-2 border-foreground pt-5 md:grid-cols-5">
+          <div className="grid gap-x-10 gap-y-6 md:grid-cols-5">
             <div className="md:col-span-3">
               <p>
                 Hardware Held is ontstaan uit een simpele ergernis: er wordt te veel goede hardware weggegooid. Apparaten
@@ -69,7 +69,7 @@ const OverOns = () => {
             <img
               src={opgehaaldImg}
               alt="Stapel opgehaalde Dell-computers, klaar voor datawissing"
-              className="h-64 w-full rounded-sm object-cover object-[50%_30%] md:col-span-2 md:h-full"
+              className="h-64 w-full rounded-xl object-cover object-[50%_30%] md:col-span-2 md:h-full"
               loading="lazy"
               draggable={false}
             />

@@ -56,7 +56,7 @@ const DatawissingOpLocatie = () => {
         </PageHero>
 
         <Sectie titel="Voor welk bedrijf?">
-          <div className="border-t-2 border-foreground pt-5">
+          <div>
             <p className="max-w-prose">
               Soms wilt u uw apparatuur niet kwijt: u verkoopt zelf door, geeft door aan een collega of een ander
               bedrijf, of bewaart het als reserve. Maar de bedrijfsgegevens moeten wel grondig van de schijf. Daarvoor
@@ -74,8 +74,8 @@ const DatawissingOpLocatie = () => {
           <Stappen stappen={steps} />
         </Sectie>
 
-        <section className="bg-foreground py-14 text-white md:py-24">
-          <div className="container grid items-center gap-x-16 gap-y-8 lg:grid-cols-12">
+        <section className="container py-16 md:py-24">
+          <div className="grid items-center gap-x-16 gap-y-8 rounded-2xl bg-foreground p-7 text-white md:p-12 lg:grid-cols-12">
             <div className="lg:col-span-8">
               <h2 className="kop-sectie">Hoe wij wissen</h2>
               <p className="mt-4 max-w-prose text-white/80">
@@ -106,15 +106,15 @@ const DatawissingOpLocatie = () => {
         </Sectie>
 
         <Sectie toon="grijs" titel="Goed om te weten">
-          <div className="grid gap-x-10 border-t-2 border-foreground sm:grid-cols-2">
-            <div className="border-b border-border/80 py-5 sm:border-b-0">
+          <div className="grid gap-x-10 sm:grid-cols-2">
+            <div className="pb-6 sm:pb-0">
               <h3 className="kop-blok">Na de wissing is de opslag leeg</h3>
               <p className="mt-2 text-muted-foreground">
                 Het besturingssysteem en alle software zijn verwijderd. Uw IT-partner of uzelf dient het apparaat opnieuw
                 in te richten als u het weer in gebruik wilt nemen. Wij bieden deze installatie niet aan.
               </p>
             </div>
-            <div className="py-5">
+            <div>
               <h3 className="kop-blok">Wilt u de hardware niet houden?</h3>
               <p className="mt-2 text-muted-foreground">
                 Als u de apparaten toch niet meer nodig heeft, is{" "}

@@ -66,10 +66,10 @@ const FaqSection = () => {
         </Link>
       }
     >
-      <Accordion type="multiple" className="w-full border-t-2 border-foreground">
+      <Accordion type="multiple" className="w-full">
         {faqs.map((faq, i) => (
           <AccordionItem key={faq.q} value={`item-${i}`}>
-            <AccordionTrigger className="gap-4 py-5 text-left font-heading text-lg font-bold leading-snug hover:no-underline">
+            <AccordionTrigger className="gap-4 py-5 text-left text-[1.0625rem] font-medium leading-snug hover:no-underline">
               {faq.q}
             </AccordionTrigger>
             <AccordionContent className="max-w-prose pb-5 text-base leading-relaxed text-muted-foreground">

@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Archivo", "system-ui", "sans-serif"],
-        heading: ["Archivo", "system-ui", "sans-serif"],
+        sans: ["Instrument Sans", "system-ui", "sans-serif"],
+        heading: ["Instrument Sans", "system-ui", "sans-serif"],
       },
       colors: {
         inkt: "hsl(var(--inkt))",

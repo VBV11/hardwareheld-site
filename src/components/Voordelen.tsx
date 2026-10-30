@@ -6,18 +6,17 @@ interface Voordeel {
   tekst: string;
 }
 
-// Rijen met pictogram, voor opsommingen die geen volgorde hebben.
+// Opsomming met pictogram, voor punten die geen volgorde hebben.
 const Voordelen = ({ items }: { items: Voordeel[] }) => (
-  <ul className="border-t-2 border-foreground">
+  <ul className="grid gap-x-10 gap-y-7 sm:grid-cols-2">
     {items.map((item) => (
-      <li
-        key={item.titel}
-        className="grid grid-cols-[1.75rem_minmax(0,1fr)] gap-x-4 border-b border-border/80 py-5 md:gap-x-6"
-      >
-        <item.icon size={24} className="mt-0.5 text-foreground" strokeWidth={1.75} aria-hidden />
+      <li key={item.titel} className="grid grid-cols-[2.5rem_minmax(0,1fr)] gap-x-4">
+        <span className="tegel">
+          <item.icon size={20} strokeWidth={1.75} aria-hidden />
+        </span>
         <div>
           <h3 className="kop-blok">{item.titel}</h3>
-          <p className="mt-1 max-w-prose text-muted-foreground">{item.tekst}</p>
+          <p className="mt-1 text-muted-foreground">{item.tekst}</p>
         </div>
       </li>
     ))}

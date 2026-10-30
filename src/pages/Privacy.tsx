@@ -33,7 +33,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
+              <h2 className="font-heading text-xl font-semibold leading-tight mb-3 md:text-2xl">
                 1. Wie zijn wij?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -48,7 +48,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
+              <h2 className="font-heading text-xl font-semibold leading-tight mb-3 md:text-2xl">
                 2. Welke persoonsgegevens verzamelen wij?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-3">
@@ -65,7 +65,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
+              <h2 className="font-heading text-xl font-semibold leading-tight mb-3 md:text-2xl">
                 3. Waarom verzamelen wij deze gegevens?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-3">
@@ -81,7 +81,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
+              <h2 className="font-heading text-xl font-semibold leading-tight mb-3 md:text-2xl">
                 4. Op welke grondslag verwerken wij uw gegevens?
               </h2>
               <ul className="list-disc pl-6 space-y-1 text-muted-foreground leading-relaxed">
@@ -93,7 +93,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
+              <h2 className="font-heading text-xl font-semibold leading-tight mb-3 md:text-2xl">
                 5. Hoe lang bewaren wij uw gegevens?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-3">
@@ -107,7 +107,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
+              <h2 className="font-heading text-xl font-semibold leading-tight mb-3 md:text-2xl">
                 6. Delen wij uw gegevens met derden?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -127,7 +127,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
+              <h2 className="font-heading text-xl font-semibold leading-tight mb-3 md:text-2xl">
                 7. Hoe beveiligen wij uw gegevens?
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -136,7 +136,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
+              <h2 className="font-heading text-xl font-semibold leading-tight mb-3 md:text-2xl">
                 8. Wat gebeurt er met data op opgehaalde hardware?
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -145,7 +145,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
+              <h2 className="font-heading text-xl font-semibold leading-tight mb-3 md:text-2xl">
                 9. Welke rechten heeft u?
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-3">
@@ -170,7 +170,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
+              <h2 className="font-heading text-xl font-semibold leading-tight mb-3 md:text-2xl">
                 10. Cookies en logbestanden
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
@@ -185,7 +185,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
+              <h2 className="font-heading text-xl font-semibold leading-tight mb-3 md:text-2xl">
                 11. Klachten
               </h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -207,7 +207,7 @@ const Privacy = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-xl font-extrabold leading-tight mb-3 md:text-2xl">
+              <h2 className="font-heading text-xl font-semibold leading-tight mb-3 md:text-2xl">
                 12. Wijzigingen
               </h2>
               <p className="text-muted-foreground leading-relaxed">

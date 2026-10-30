@@ -108,7 +108,7 @@ const LocatiePagina = () => {
         </Sectie>
 
         <Sectie titel={`Ophaalservice in ${stad.naam} en omgeving`}>
-          <div className="border-t-2 border-foreground pt-5">
+          <div>
             <p className="max-w-prose">
               Hardware Held is actief in heel {stad.regio}. Naast {stad.naam} rijden wij ook naar {buurt} en andere
               gemeenten in de regio. Er zijn geen reiskosten en geen minimumhoeveelheid: of u nu één apparaat heeft of

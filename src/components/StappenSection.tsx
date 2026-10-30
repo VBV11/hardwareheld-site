@@ -23,6 +23,7 @@ const stappen = [
 const StappenSection = () => (
   <Sectie
     id="zo-werkt-het"
+    toon="grijs"
     titel="Zo werkt het"
     intro="U meldt zich, wij regelen de rest. Of u nu één laptop heeft of twintig werkplekken: wij komen langs en het ophalen is gratis."
     actie={

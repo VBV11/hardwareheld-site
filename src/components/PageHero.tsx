@@ -15,9 +15,9 @@ interface PageHeroProps {
 }
 
 const PageHero = ({ kruimels, titel, intro, children }: PageHeroProps) => (
-  <section className="border-b-2 border-foreground bg-muted pb-10 pt-[6.75rem] md:pb-14 md:pt-32">
+  <section className="border-b border-border pb-10 pt-28 md:pb-14 md:pt-36">
     <div className="container">
-      <nav aria-label="Kruimelpad" className="mb-5 text-sm text-muted-foreground">
+      <nav aria-label="Kruimelpad" className="mb-4 text-sm text-muted-foreground">
         <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
           <li>
             <Link to="/" className="underline-offset-4 hover:text-foreground hover:underline">
@@ -40,8 +40,8 @@ const PageHero = ({ kruimels, titel, intro, children }: PageHeroProps) => (
           ))}
         </ol>
       </nav>
-      <h1 className="kop-pagina max-w-4xl">{titel}</h1>
-      {intro && <p className="inleiding mt-5 max-w-2xl text-foreground/80">{intro}</p>}
+      <h1 className="kop-pagina max-w-3xl">{titel}</h1>
+      {intro && <p className="inleiding mt-4 max-w-2xl text-muted-foreground">{intro}</p>}
       {children && <div className="mt-7">{children}</div>}
     </div>
   </section>

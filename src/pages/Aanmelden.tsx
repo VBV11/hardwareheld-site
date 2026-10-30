@@ -45,12 +45,12 @@ export default function Aanmelden() {
               <AanmeldFormulier />
             </div>
             <aside className="lg:col-span-4 lg:row-start-1 lg:col-start-9">
-              <div className="border-t-2 border-foreground pt-4 lg:sticky lg:top-28">
+              <div className="rounded-xl bg-muted p-5 lg:sticky lg:top-28">
                 <h2 className="kop-blok">Wat u mag verwachten</h2>
                 <ul className="mt-3 space-y-2">
                   {zekerheden.map((z) => (
                     <li key={z} className="flex items-start gap-2.5 leading-snug">
-                      <Check size={18} strokeWidth={3} className="mt-0.5 flex-shrink-0 text-led" aria-hidden />
+                      <Check size={18} strokeWidth={2.5} className="mt-0.5 flex-shrink-0 text-inkt" aria-hidden />
                       {z}
                     </li>
                   ))}

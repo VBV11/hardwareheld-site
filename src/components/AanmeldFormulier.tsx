@@ -229,7 +229,7 @@ export default function AanmeldFormulier() {
           <Checkbox
             checked={form.akkoord}
             onCheckedChange={(v) => set("akkoord", !!v)}
-            className={`mt-0.5 border-foreground data-[state=checked]:bg-foreground data-[state=checked]:text-white ${errors.akkoord ? "border-destructive" : ""}`}
+            className={`mt-0.5 rounded-[4px] border-foreground data-[state=checked]:bg-foreground data-[state=checked]:text-white ${errors.akkoord ? "border-destructive" : ""}`}
           />
           <span className="text-sm leading-snug">
             Ik ga akkoord met het{" "}
